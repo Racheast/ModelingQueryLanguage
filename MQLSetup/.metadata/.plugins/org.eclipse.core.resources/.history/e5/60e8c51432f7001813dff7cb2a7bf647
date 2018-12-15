@@ -1,0 +1,246 @@
+/**
+ * This is a copyright text.
+ */
+package qmm.impl;
+
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import qmm.EvaluationOperator;
+import qmm.RootClass;
+import qmm.qmmPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Root Class</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link qmm.impl.RootClassImpl#getEvaluationOperator <em>Evaluation Operator</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class RootClassImpl extends MinimalEObjectImpl.Container implements RootClass {
+	/**
+	 * The cached value of the '{@link #getEvaluationOperator() <em>Evaluation Operator</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvaluationOperator()
+	 * @generated
+	 * @ordered
+	 */
+	protected EvaluationOperator evaluationOperator;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RootClassImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return qmmPackage.eINSTANCE.getRootClass();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvaluationOperator getEvaluationOperator() {
+		if (evaluationOperator != null && evaluationOperator.eIsProxy()) {
+			InternalEObject oldEvaluationOperator = (InternalEObject)evaluationOperator;
+			evaluationOperator = (EvaluationOperator)eResolveProxy(oldEvaluationOperator);
+			if (evaluationOperator != oldEvaluationOperator) {
+				InternalEObject newEvaluationOperator = (InternalEObject)evaluationOperator;
+				NotificationChain msgs = oldEvaluationOperator.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, null, null);
+				if (newEvaluationOperator.eInternalContainer() == null) {
+					msgs = newEvaluationOperator.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, null, msgs);
+				}
+				if (msgs != null) msgs.dispatch();
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, oldEvaluationOperator, evaluationOperator));
+			}
+		}
+		return evaluationOperator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvaluationOperator basicGetEvaluationOperator() {
+		return evaluationOperator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEvaluationOperator(EvaluationOperator newEvaluationOperator, NotificationChain msgs) {
+		EvaluationOperator oldEvaluationOperator = evaluationOperator;
+		evaluationOperator = newEvaluationOperator;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, oldEvaluationOperator, newEvaluationOperator);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEvaluationOperator(EvaluationOperator newEvaluationOperator) {
+		if (newEvaluationOperator != evaluationOperator) {
+			NotificationChain msgs = null;
+			if (evaluationOperator != null)
+				msgs = ((InternalEObject)evaluationOperator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, null, msgs);
+			if (newEvaluationOperator != null)
+				msgs = ((InternalEObject)newEvaluationOperator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, null, msgs);
+			msgs = basicSetEvaluationOperator(newEvaluationOperator, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR, newEvaluationOperator, newEvaluationOperator));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList validateCheckExpression(final Object o) {
+		EClass booleanType = QmmPackage.eINSTANCE.getBoolean_Type();
+		EClass functionalOperatorType = QmmPackage.eINSTANCE.getFunctionalOperator();
+		EClass bitOperatorType = QmmPackage.eINSTANCE.getBitOperator();
+		qmm.Operator operator = (qmm.Operator)o;
+		EList diagnosticList = new org.eclipse.emf.common.util.BasicEList();
+		
+		if(functionalOperatorType.isSuperTypeOf(operator.eClass())){
+			qmm.FunctionalOperator lastOperator = (qmm.FunctionalOperator)((qmm.FunctionalOperator)operator).getLastOperator();
+		    	EClass lastOperatorType = (EClass)lastOperator.getType();
+		    	if(!booleanType.isSuperTypeOf(lastOperatorType)){
+					String errorMessage = "Operator " + lastOperator.eClass().getName() + " of attribute " + this.eClass().getName() + " is of type " + lastOperatorType.getName() + ", but must be (a subtype) of type " + booleanType.getName() + ".";
+		    		diagnosticList.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.QmmValidator.DIAGNOSTIC_SOURCE,qmm.util.QmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, errorMessage,new Object[] { this }));
+		    	}
+		}else if(bitOperatorType.isSuperTypeOf(operator.eClass())){
+		    for(qmm.Operator op : (EList<qmm.Operator>)operator.eGet(operator.eClass().getEStructuralFeature("connects"))){
+		    	diagnosticList.addAll(validateCheckExpression(op));
+		    }
+		}
+		return diagnosticList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR:
+				return basicSetEvaluationOperator(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR:
+				if (resolve) return getEvaluationOperator();
+				return basicGetEvaluationOperator();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR:
+				setEvaluationOperator((EvaluationOperator)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR:
+				setEvaluationOperator((EvaluationOperator)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case qmmPackage.ROOT_CLASS__EVALUATION_OPERATOR:
+				return evaluationOperator != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case qmmPackage.ROOT_CLASS___VALIDATE_CHECK_EXPRESSION__OBJECT:
+				return validateCheckExpression(arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //RootClassImpl

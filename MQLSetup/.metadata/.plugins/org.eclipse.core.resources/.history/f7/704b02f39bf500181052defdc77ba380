@@ -1,0 +1,218 @@
+/**
+ * This is a copyright text.
+ */
+package qmm.impl;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+import java.util.Map;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import qmm.AttributeLib;
+import qmm.Attribute_OrGroup;
+import qmm.CAEXBasicObject;
+import qmm.CAEXObject;
+import qmm.qmmPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Attribute Lib</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link qmm.impl.AttributeLibImpl#getAttributeType <em>Attribute Type</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class AttributeLibImpl extends CAEXObjectImpl implements AttributeLib {
+	/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Attribute_OrGroup> attributeType;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttributeLibImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return qmmPackage.eINSTANCE.getAttributeLib();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Attribute_OrGroup> getAttributeType() {
+		if (attributeType == null) {
+			attributeType = new EObjectContainmentEList<Attribute_OrGroup>(Attribute_OrGroup.class, this, qmmPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE);
+		}
+		return attributeType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validate(final DiagnosticChain diagnostic, final Map context) {
+		if(diagnostic!=null){
+		    if(this.evaluationOperator != null){
+		    	EList<org.eclipse.emf.common.util.BasicDiagnostic> diagnosticList = validateCheckExpression(this.evaluationOperator);
+		    	for(int i=0; i<diagnosticList.size(); i++){
+		    		diagnostic.add((org.eclipse.emf.common.util.BasicDiagnostic)diagnosticList.get(i));
+		    	}
+		    }
+		}
+		
+		final int attributeType_upperBound = -1;
+		int nr_nonTransitive_attributeType = 0;
+		if(this.attributeType != null){
+				for(qmm.OrGroup og : this.attributeType) if(!og.isTransitive()) nr_nonTransitive_attributeType++;
+		}
+		if(nr_nonTransitive_attributeType > attributeType_upperBound && attributeType_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.QmmValidator.DIAGNOSTIC_SOURCE,qmm.util.QmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_attributeType + " non-transitive attributeType. Only " + attributeType_upperBound + " are allowed.",new Object[] { this }));
+		
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case qmmPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE:
+				return ((InternalEList<?>)getAttributeType()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case qmmPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE:
+				return getAttributeType();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case qmmPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE:
+				getAttributeType().clear();
+				getAttributeType().addAll((Collection<? extends Attribute_OrGroup>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case qmmPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE:
+				getAttributeType().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case qmmPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE:
+				return attributeType != null && !attributeType.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == CAEXBasicObject.class) {
+			switch (baseOperationID) {
+				case qmmPackage.CAEX_BASIC_OBJECT___VALIDATE__DIAGNOSTICCHAIN_MAP: return qmmPackage.ATTRIBUTE_LIB___VALIDATE__DIAGNOSTICCHAIN_MAP;
+				default: return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		if (baseClass == CAEXObject.class) {
+			switch (baseOperationID) {
+				case qmmPackage.CAEX_OBJECT___VALIDATE__DIAGNOSTICCHAIN_MAP: return qmmPackage.ATTRIBUTE_LIB___VALIDATE__DIAGNOSTICCHAIN_MAP;
+				default: return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case qmmPackage.ATTRIBUTE_LIB___VALIDATE__DIAGNOSTICCHAIN_MAP:
+				return validate((DiagnosticChain)arguments.get(0), (Map)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //AttributeLibImpl

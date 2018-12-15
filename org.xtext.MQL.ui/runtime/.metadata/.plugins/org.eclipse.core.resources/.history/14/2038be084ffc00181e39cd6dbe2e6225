@@ -1,0 +1,21 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement94014917(result);
+}
+
+pattern InternalElement94014917(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+	check(((n1).contains("R1")));
+}
+
+pattern InternalElement_attribute938367183(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+

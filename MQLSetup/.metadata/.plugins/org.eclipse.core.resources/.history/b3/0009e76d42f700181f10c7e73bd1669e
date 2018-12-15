@@ -1,0 +1,464 @@
+/**
+ * This is a copyright text.
+ */
+package qmm.impl;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+import java.util.Map;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import qmm.AdditionalInformation_OrGroup;
+import qmm.CAEXBasicObject;
+import qmm.CAEXBasicObject_changeMode_AttrEClass;
+import qmm.Copyright_OrGroup;
+import qmm.Description_OrGroup;
+import qmm.Revision_OrGroup;
+import qmm.Version_OrGroup;
+import qmm.qmmPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>CAEX Basic Object</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link qmm.impl.CAEXBasicObjectImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link qmm.impl.CAEXBasicObjectImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link qmm.impl.CAEXBasicObjectImpl#getRevision <em>Revision</em>}</li>
+ *   <li>{@link qmm.impl.CAEXBasicObjectImpl#getCopyright <em>Copyright</em>}</li>
+ *   <li>{@link qmm.impl.CAEXBasicObjectImpl#getAdditionalInformation <em>Additional Information</em>}</li>
+ *   <li>{@link qmm.impl.CAEXBasicObjectImpl#getChangeMode_AttrEClass <em>Change Mode Attr EClass</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class CAEXBasicObjectImpl extends RootClassImpl implements CAEXBasicObject {
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Description_OrGroup> description;
+
+	/**
+	 * The cached value of the '{@link #getVersion() <em>Version</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Version_OrGroup> version;
+
+	/**
+	 * The cached value of the '{@link #getRevision() <em>Revision</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRevision()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Revision_OrGroup> revision;
+
+	/**
+	 * The cached value of the '{@link #getCopyright() <em>Copyright</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCopyright()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Copyright_OrGroup> copyright;
+
+	/**
+	 * The cached value of the '{@link #getAdditionalInformation() <em>Additional Information</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdditionalInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AdditionalInformation_OrGroup> additionalInformation;
+
+	/**
+	 * The cached value of the '{@link #getChangeMode_AttrEClass() <em>Change Mode Attr EClass</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChangeMode_AttrEClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected CAEXBasicObject_changeMode_AttrEClass changeMode_AttrEClass;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CAEXBasicObjectImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return qmmPackage.eINSTANCE.getCAEXBasicObject();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Description_OrGroup> getDescription() {
+		if (description == null) {
+			description = new EObjectContainmentEList.Resolving<Description_OrGroup>(Description_OrGroup.class, this, qmmPackage.CAEX_BASIC_OBJECT__DESCRIPTION);
+		}
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Version_OrGroup> getVersion() {
+		if (version == null) {
+			version = new EObjectContainmentEList.Resolving<Version_OrGroup>(Version_OrGroup.class, this, qmmPackage.CAEX_BASIC_OBJECT__VERSION);
+		}
+		return version;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Revision_OrGroup> getRevision() {
+		if (revision == null) {
+			revision = new EObjectContainmentEList.Resolving<Revision_OrGroup>(Revision_OrGroup.class, this, qmmPackage.CAEX_BASIC_OBJECT__REVISION);
+		}
+		return revision;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Copyright_OrGroup> getCopyright() {
+		if (copyright == null) {
+			copyright = new EObjectContainmentEList.Resolving<Copyright_OrGroup>(Copyright_OrGroup.class, this, qmmPackage.CAEX_BASIC_OBJECT__COPYRIGHT);
+		}
+		return copyright;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AdditionalInformation_OrGroup> getAdditionalInformation() {
+		if (additionalInformation == null) {
+			additionalInformation = new EObjectContainmentEList.Resolving<AdditionalInformation_OrGroup>(AdditionalInformation_OrGroup.class, this, qmmPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION);
+		}
+		return additionalInformation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CAEXBasicObject_changeMode_AttrEClass getChangeMode_AttrEClass() {
+		if (changeMode_AttrEClass != null && changeMode_AttrEClass.eIsProxy()) {
+			InternalEObject oldChangeMode_AttrEClass = (InternalEObject)changeMode_AttrEClass;
+			changeMode_AttrEClass = (CAEXBasicObject_changeMode_AttrEClass)eResolveProxy(oldChangeMode_AttrEClass);
+			if (changeMode_AttrEClass != oldChangeMode_AttrEClass) {
+				InternalEObject newChangeMode_AttrEClass = (InternalEObject)changeMode_AttrEClass;
+				NotificationChain msgs = oldChangeMode_AttrEClass.eInverseRemove(this, EOPPOSITE_FEATURE_BASE - qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, null, null);
+				if (newChangeMode_AttrEClass.eInternalContainer() == null) {
+					msgs = newChangeMode_AttrEClass.eInverseAdd(this, EOPPOSITE_FEATURE_BASE - qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, null, msgs);
+				}
+				if (msgs != null) msgs.dispatch();
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, oldChangeMode_AttrEClass, changeMode_AttrEClass));
+			}
+		}
+		return changeMode_AttrEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CAEXBasicObject_changeMode_AttrEClass basicGetChangeMode_AttrEClass() {
+		return changeMode_AttrEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetChangeMode_AttrEClass(CAEXBasicObject_changeMode_AttrEClass newChangeMode_AttrEClass, NotificationChain msgs) {
+		CAEXBasicObject_changeMode_AttrEClass oldChangeMode_AttrEClass = changeMode_AttrEClass;
+		changeMode_AttrEClass = newChangeMode_AttrEClass;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, oldChangeMode_AttrEClass, newChangeMode_AttrEClass);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChangeMode_AttrEClass(CAEXBasicObject_changeMode_AttrEClass newChangeMode_AttrEClass) {
+		if (newChangeMode_AttrEClass != changeMode_AttrEClass) {
+			NotificationChain msgs = null;
+			if (changeMode_AttrEClass != null)
+				msgs = ((InternalEObject)changeMode_AttrEClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, null, msgs);
+			if (newChangeMode_AttrEClass != null)
+				msgs = ((InternalEObject)newChangeMode_AttrEClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, null, msgs);
+			msgs = basicSetChangeMode_AttrEClass(newChangeMode_AttrEClass, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS, newChangeMode_AttrEClass, newChangeMode_AttrEClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validate(final DiagnosticChain diagnostic, final Map context) {
+		if(diagnostic!=null){
+		    if(this.evaluationOperator != null){
+		    	EList<org.eclipse.emf.common.util.BasicDiagnostic> diagnosticList = validateCheckExpression(this.evaluationOperator);
+		    	for(int i=0; i<diagnosticList.size(); i++){
+		    		diagnostic.add((org.eclipse.emf.common.util.BasicDiagnostic)diagnosticList.get(i));
+		    	}
+		    }
+		}
+		
+		final int description_upperBound = 1;
+		int nr_nonTransitive_description = 0;
+		if(this.description != null){
+				for(qmm.OrGroup og : this.description) if(!og.isTransitive()) nr_nonTransitive_description++;
+		}
+		if(nr_nonTransitive_description > description_upperBound && description_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.qmmValidator.DIAGNOSTIC_SOURCE,qmm.util.qmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_description + " non-transitive description. Only " + description_upperBound + " are allowed.",new Object[] { this }));
+		
+		final int version_upperBound = 1;
+		int nr_nonTransitive_version = 0;
+		if(this.version != null){
+				for(qmm.OrGroup og : this.version) if(!og.isTransitive()) nr_nonTransitive_version++;
+		}
+		if(nr_nonTransitive_version > version_upperBound && version_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.qmmValidator.DIAGNOSTIC_SOURCE,qmm.util.qmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_version + " non-transitive version. Only " + version_upperBound + " are allowed.",new Object[] { this }));
+		
+		final int revision_upperBound = -1;
+		int nr_nonTransitive_revision = 0;
+		if(this.revision != null){
+				for(qmm.OrGroup og : this.revision) if(!og.isTransitive()) nr_nonTransitive_revision++;
+		}
+		if(nr_nonTransitive_revision > revision_upperBound && revision_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.qmmValidator.DIAGNOSTIC_SOURCE,qmm.util.qmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_revision + " non-transitive revision. Only " + revision_upperBound + " are allowed.",new Object[] { this }));
+		
+		final int copyright_upperBound = 1;
+		int nr_nonTransitive_copyright = 0;
+		if(this.copyright != null){
+				for(qmm.OrGroup og : this.copyright) if(!og.isTransitive()) nr_nonTransitive_copyright++;
+		}
+		if(nr_nonTransitive_copyright > copyright_upperBound && copyright_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.qmmValidator.DIAGNOSTIC_SOURCE,qmm.util.qmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_copyright + " non-transitive copyright. Only " + copyright_upperBound + " are allowed.",new Object[] { this }));
+		
+		final int additionalInformation_upperBound = 1;
+		int nr_nonTransitive_additionalInformation = 0;
+		if(this.additionalInformation != null){
+				for(qmm.OrGroup og : this.additionalInformation) if(!og.isTransitive()) nr_nonTransitive_additionalInformation++;
+		}
+		if(nr_nonTransitive_additionalInformation > additionalInformation_upperBound && additionalInformation_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.qmmValidator.DIAGNOSTIC_SOURCE,qmm.util.qmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_additionalInformation + " non-transitive additionalInformation. Only " + additionalInformation_upperBound + " are allowed.",new Object[] { this }));
+		
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case qmmPackage.CAEX_BASIC_OBJECT__DESCRIPTION:
+				return ((InternalEList<?>)getDescription()).basicRemove(otherEnd, msgs);
+			case qmmPackage.CAEX_BASIC_OBJECT__VERSION:
+				return ((InternalEList<?>)getVersion()).basicRemove(otherEnd, msgs);
+			case qmmPackage.CAEX_BASIC_OBJECT__REVISION:
+				return ((InternalEList<?>)getRevision()).basicRemove(otherEnd, msgs);
+			case qmmPackage.CAEX_BASIC_OBJECT__COPYRIGHT:
+				return ((InternalEList<?>)getCopyright()).basicRemove(otherEnd, msgs);
+			case qmmPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION:
+				return ((InternalEList<?>)getAdditionalInformation()).basicRemove(otherEnd, msgs);
+			case qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS:
+				return basicSetChangeMode_AttrEClass(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case qmmPackage.CAEX_BASIC_OBJECT__DESCRIPTION:
+				return getDescription();
+			case qmmPackage.CAEX_BASIC_OBJECT__VERSION:
+				return getVersion();
+			case qmmPackage.CAEX_BASIC_OBJECT__REVISION:
+				return getRevision();
+			case qmmPackage.CAEX_BASIC_OBJECT__COPYRIGHT:
+				return getCopyright();
+			case qmmPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION:
+				return getAdditionalInformation();
+			case qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS:
+				if (resolve) return getChangeMode_AttrEClass();
+				return basicGetChangeMode_AttrEClass();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case qmmPackage.CAEX_BASIC_OBJECT__DESCRIPTION:
+				getDescription().clear();
+				getDescription().addAll((Collection<? extends Description_OrGroup>)newValue);
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__VERSION:
+				getVersion().clear();
+				getVersion().addAll((Collection<? extends Version_OrGroup>)newValue);
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__REVISION:
+				getRevision().clear();
+				getRevision().addAll((Collection<? extends Revision_OrGroup>)newValue);
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__COPYRIGHT:
+				getCopyright().clear();
+				getCopyright().addAll((Collection<? extends Copyright_OrGroup>)newValue);
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION:
+				getAdditionalInformation().clear();
+				getAdditionalInformation().addAll((Collection<? extends AdditionalInformation_OrGroup>)newValue);
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS:
+				setChangeMode_AttrEClass((CAEXBasicObject_changeMode_AttrEClass)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case qmmPackage.CAEX_BASIC_OBJECT__DESCRIPTION:
+				getDescription().clear();
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__VERSION:
+				getVersion().clear();
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__REVISION:
+				getRevision().clear();
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__COPYRIGHT:
+				getCopyright().clear();
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION:
+				getAdditionalInformation().clear();
+				return;
+			case qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS:
+				setChangeMode_AttrEClass((CAEXBasicObject_changeMode_AttrEClass)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case qmmPackage.CAEX_BASIC_OBJECT__DESCRIPTION:
+				return description != null && !description.isEmpty();
+			case qmmPackage.CAEX_BASIC_OBJECT__VERSION:
+				return version != null && !version.isEmpty();
+			case qmmPackage.CAEX_BASIC_OBJECT__REVISION:
+				return revision != null && !revision.isEmpty();
+			case qmmPackage.CAEX_BASIC_OBJECT__COPYRIGHT:
+				return copyright != null && !copyright.isEmpty();
+			case qmmPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION:
+				return additionalInformation != null && !additionalInformation.isEmpty();
+			case qmmPackage.CAEX_BASIC_OBJECT__CHANGE_MODE_ATTR_ECLASS:
+				return changeMode_AttrEClass != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case qmmPackage.CAEX_BASIC_OBJECT___VALIDATE__DIAGNOSTICCHAIN_MAP:
+				return validate((DiagnosticChain)arguments.get(0), (Map)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //CAEXBasicObjectImpl

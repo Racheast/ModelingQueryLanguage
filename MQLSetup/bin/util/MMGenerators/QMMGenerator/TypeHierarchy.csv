@@ -1,0 +1,9 @@
+Object;Number
+Number;Integer
+Number;Long
+Number;Double
+Number;Float
+Object;CharSequence
+Object;Character
+Object;Boolean
+CharSequence;String

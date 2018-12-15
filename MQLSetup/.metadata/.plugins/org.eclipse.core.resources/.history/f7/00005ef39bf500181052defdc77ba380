@@ -1,0 +1,97 @@
+/**
+ * This is a copyright text.
+ */
+package qmm;
+
+import java.util.Map;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Internal Element</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link qmm.InternalElement#getRoleRequirements <em>Role Requirements</em>}</li>
+ *   <li>{@link qmm.InternalElement#getBaseSystemUnit <em>Base System Unit</em>}</li>
+ *   <li>{@link qmm.InternalElement#getRefBaseSystemUnitPath_AttrEClass <em>Ref Base System Unit Path Attr EClass</em>}</li>
+ * </ul>
+ *
+ * @see qmm.qmmPackage#getInternalElement()
+ * @model
+ * @generated
+ */
+public interface InternalElement extends SystemUnitClass, RootClass {
+	/**
+	 * Returns the value of the '<em><b>Role Requirements</b></em>' containment reference list.
+	 * The list contents are of type {@link qmm.RoleRequirements_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Role Requirements</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Role Requirements</em>' containment reference list.
+	 * @see qmm.qmmPackage#getInternalElement_RoleRequirements()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RoleRequirements_OrGroup> getRoleRequirements();
+
+	/**
+	 * Returns the value of the '<em><b>Base System Unit</b></em>' containment reference list.
+	 * The list contents are of type {@link qmm.SystemUnitClass_OrGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Base System Unit</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base System Unit</em>' containment reference list.
+	 * @see qmm.qmmPackage#getInternalElement_BaseSystemUnit()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	EList<SystemUnitClass_OrGroup> getBaseSystemUnit();
+
+	/**
+	 * Returns the value of the '<em><b>Ref Base System Unit Path Attr EClass</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ref Base System Unit Path Attr EClass</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ref Base System Unit Path Attr EClass</em>' containment reference.
+	 * @see #setRefBaseSystemUnitPath_AttrEClass(InternalElement_refBaseSystemUnitPath_AttrEClass)
+	 * @see qmm.qmmPackage#getInternalElement_RefBaseSystemUnitPath_AttrEClass()
+	 * @model containment="true" resolveProxies="true"
+	 * @generated
+	 */
+	InternalElement_refBaseSystemUnitPath_AttrEClass getRefBaseSystemUnitPath_AttrEClass();
+
+	/**
+	 * Sets the value of the '{@link qmm.InternalElement#getRefBaseSystemUnitPath_AttrEClass <em>Ref Base System Unit Path Attr EClass</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ref Base System Unit Path Attr EClass</em>' containment reference.
+	 * @see #getRefBaseSystemUnitPath_AttrEClass()
+	 * @generated
+	 */
+	void setRefBaseSystemUnitPath_AttrEClass(InternalElement_refBaseSystemUnitPath_AttrEClass value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if(diagnostic!=null){\n    if(this.evaluationOperator != null){\n    \tEList<org.eclipse.emf.common.util.BasicDiagnostic> diagnosticList = validateCheckExpression(this.evaluationOperator);\n    \tfor(int i=0; i<diagnosticList.size(); i++){\n    \t\tdiagnostic.add((org.eclipse.emf.common.util.BasicDiagnostic)diagnosticList.get(i));\n    \t}\n    }\n}\n\nfinal int roleRequirements_upperBound = -1;\nint nr_nonTransitive_roleRequirements = 0;\nif(this.roleRequirements != null){\n\t\tfor(qmm.OrGroup og : this.roleRequirements) if(!og.isTransitive()) nr_nonTransitive_roleRequirements++;\n}\nif(nr_nonTransitive_roleRequirements > roleRequirements_upperBound && roleRequirements_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.QmmValidator.DIAGNOSTIC_SOURCE,qmm.util.QmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, \"EClass contains \" + nr_nonTransitive_roleRequirements + \" non-transitive roleRequirements. Only \" + roleRequirements_upperBound + \" are allowed.\",new Object[] { this }));\n\nfinal int baseSystemUnit_upperBound = 1;\nint nr_nonTransitive_baseSystemUnit = 0;\nif(this.baseSystemUnit != null){\n\t\tfor(qmm.OrGroup og : this.baseSystemUnit) if(!og.isTransitive()) nr_nonTransitive_baseSystemUnit++;\n}\nif(nr_nonTransitive_baseSystemUnit > baseSystemUnit_upperBound && baseSystemUnit_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.QmmValidator.DIAGNOSTIC_SOURCE,qmm.util.QmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, \"EClass contains \" + nr_nonTransitive_baseSystemUnit + \" non-transitive baseSystemUnit. Only \" + baseSystemUnit_upperBound + \" are allowed.\",new Object[] { this }));\n\nreturn true;'"
+	 * @generated
+	 */
+	boolean validate(DiagnosticChain diagnostic, Map context);
+
+} // InternalElement

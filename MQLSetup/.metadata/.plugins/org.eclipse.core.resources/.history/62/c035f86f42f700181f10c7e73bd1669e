@@ -1,0 +1,111 @@
+/**
+ * This is a copyright text.
+ */
+package qmm.impl;
+
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import qmm.EFeatureMapEntry_FunctionalOperator;
+import qmm.FunctionalOperator;
+import qmm.TypedElement;
+import qmm.qmmPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>EFeature Map Entry Functional Operator</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public abstract class EFeatureMapEntry_FunctionalOperatorImpl extends EFeatureMapEntry_ExpressionOperatorImpl implements EFeatureMapEntry_FunctionalOperator {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EFeatureMapEntry_FunctionalOperatorImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return qmmPackage.eINSTANCE.getEFeatureMapEntry_FunctionalOperator();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object getLastOperator() {
+		qmm.FunctionalOperator operator = this;
+		while(operator.eGet(operator.eClass().getEStructuralFeature("operator")) != null){
+		    operator = (qmm.FunctionalOperator) operator.eGet(operator.eClass().getEStructuralFeature("operator"));
+		}
+		return operator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object getType() {
+		EClass typeEClass = qmmPackage.eINSTANCE.getType();
+		    EClass type = null;
+		    for(EClass possibleTypeSubClass : this.eClass().getEAllSuperTypes()){
+		    	if(typeEClass.isSuperTypeOf(possibleTypeSubClass) && !typeEClass.equals(possibleTypeSubClass)){
+		    		type = possibleTypeSubClass;
+		    	}
+		    }
+		    return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == TypedElement.class) {
+			switch (baseOperationID) {
+				case qmmPackage.TYPED_ELEMENT___GET_TYPE: return qmmPackage.EFEATURE_MAP_ENTRY_FUNCTIONAL_OPERATOR___GET_TYPE;
+				default: return -1;
+			}
+		}
+		if (baseClass == FunctionalOperator.class) {
+			switch (baseOperationID) {
+				case qmmPackage.FUNCTIONAL_OPERATOR___GET_LAST_OPERATOR: return qmmPackage.EFEATURE_MAP_ENTRY_FUNCTIONAL_OPERATOR___GET_LAST_OPERATOR;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case qmmPackage.EFEATURE_MAP_ENTRY_FUNCTIONAL_OPERATOR___GET_LAST_OPERATOR:
+				return getLastOperator();
+			case qmmPackage.EFEATURE_MAP_ENTRY_FUNCTIONAL_OPERATOR___GET_TYPE:
+				return getType();
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //EFeatureMapEntry_FunctionalOperatorImpl

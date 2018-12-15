@@ -1,0 +1,35 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass2138033908(result);
+}
+
+pattern ie_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern SystemUnitClass2138033908(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find ie_OrGroup_ref(elem,ie);
+    find count630937491(elem, ref630937491);
+    check(((ref630937491)>(3)));
+}
+
+pattern count630937491(elem:SystemUnitClass, result:java Integer){
+    result == count find ie_OrGroup_ref(elem, ie);
+}
+
+pattern SystemUnitClass_internalElement1609661170(from:SystemUnitClass, to:InternalElement){
+    SystemUnitClass.internalElement(from, to);
+}
+
+pattern SystemUnitClass_attribute1001709080(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern ie_OrGroup_ref(container:SystemUnitClass, member:InternalElement){
+    find ie_OrGroup(member);
+    find SystemUnitClass_internalElement1609661170+(container,member);
+}
+

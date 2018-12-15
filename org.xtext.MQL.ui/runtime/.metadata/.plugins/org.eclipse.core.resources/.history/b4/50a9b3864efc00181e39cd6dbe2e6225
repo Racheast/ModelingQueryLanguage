@@ -1,0 +1,71 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1404085741(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+    find Attribute1700135976(elem);
+}
+
+pattern InternalElement1404085741(elem:InternalElement){
+    InternalElement(elem);
+    find id0_CAEXObject_iD_AttrEClass(elem,id0);
+    find a1_OrGroup_ref(elem,a1);
+    a1 != id0;
+}
+
+pattern Attribute1700135976(elem:Attribute){
+    Attribute(elem);
+    find id1_CAEXObject_iD_AttrEClass(elem,id1);
+    find v1_Attribute_value_AttrEClass(elem,v1);
+    id1 != v1;
+    find Integer_parseInt866081442(elem, ref866081442);
+    find Integer_parseInt2119305910(elem, ref2119305910);
+    check(((ref866081442)>(ref2119305910)));
+}
+
+pattern id0_CAEXObject_iD_AttrEClass(elem:InternalElement,id0){
+	InternalElement.iD(elem,id0);
+}
+
+pattern id1_CAEXObject_iD_AttrEClass(elem:Attribute,id1){
+	Attribute.iD(elem,id1);
+}
+
+pattern v1_Attribute_value_AttrEClass(elem:Attribute,v1){
+	Attribute.value(elem,v1);
+}
+
+pattern Integer_parseInt2119305910(elem:Attribute, result:java Integer){
+    Attribute(elem);    find argument_2122239652(elem, ref2122239652);
+	result == eval(Integer.parseInt(ref2122239652));
+}
+
+pattern Integer_parseInt866081442(elem:Attribute, result:java Integer){
+    Attribute(elem);    find argument_975761239(elem, ref975761239);
+	result == eval(Integer.parseInt(ref975761239));
+}
+
+pattern argument_2122239652(elem:Attribute, result: java String){
+    find id1_CAEXObject_iD_AttrEClass(elem, result);
+}
+
+pattern argument_975761239(elem:Attribute, result: java String){
+    find v1_Attribute_value_AttrEClass(elem, result);
+}
+
+pattern InternalElement_attribute1549385711(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern SystemUnitClass_attribute1549385711(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute1549385711(container,member);
+}
+

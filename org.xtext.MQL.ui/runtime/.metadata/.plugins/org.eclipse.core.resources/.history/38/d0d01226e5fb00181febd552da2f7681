@@ -1,0 +1,35 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass146545437(result);
+}
+
+pattern SystemUnitClass146545437(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find sum715599792(elem, ref715599792);
+    //check(((ref715599792)>(10)));
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:SystemUnitClass,n1){
+	SystemUnitClass.name(elem,n1);
+}
+
+pattern sum715599792(elem:SystemUnitClass, result:java Integer){
+    result == sum find argument_1900900886(elem, #);
+}
+
+pattern argument_1900900886(elem:SystemUnitClass, result: java String){
+    find n1_CAEXObject_name_AttrEClass(elem, n1);
+    result == eval(((n1).length()));
+}
+
+pattern SystemUnitClass_internalElement1609661170(from:SystemUnitClass, to:InternalElement){
+    SystemUnitClass.internalElement(from, to);
+}
+
+pattern SystemUnitClass_attribute1001709080(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+

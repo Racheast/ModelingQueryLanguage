@@ -1,0 +1,76 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass1102448490(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+    find Attribute186016524(elem);
+}
+or{
+    find Attribute534839997(elem);
+}
+
+pattern Attribute186016524(elem:Attribute){
+    Attribute(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find v1_Attribute_value_AttrEClass(elem,v1);
+    v1 != n1;
+}
+
+pattern SystemUnitClass1102448490(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find a1_OrGroup_ref(elem,a1);
+    find count1691624778(elem, ref1691624778);
+    check(((ref1691624778)>(1)));
+}
+
+pattern Attribute534839997(elem:Attribute){
+    Attribute(elem);
+    find n2_CAEXObject_name_AttrEClass(elem,n2);
+    find Integer_parseInt387043852(elem, ref387043852);
+    find Integer_parseInt1746918497(elem, ref1746918497);
+    check(((ref387043852)>(ref1746918497)));
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:Attribute,n1){
+	Attribute.name(elem,n1);
+	check(((((n1).length()))>(0)));
+}
+
+pattern v1_Attribute_value_AttrEClass(elem:Attribute,v1){
+	Attribute.value(elem,v1);
+	check(!((v1).isEmpty()));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:Attribute,n2){
+	Attribute.name(elem,n2);
+}
+
+pattern Integer_parseInt387043852(elem:Attribute, result:java Integer){
+    Attribute(elem);    find argument_1225437202(elem, ref1225437202);
+	result == eval(Integer.parseInt(ref1225437202));
+}
+
+pattern count1691624778(elem:SystemUnitClass, result:java Integer){
+    result == count find a1_OrGroup_ref(elem, a1);
+}
+
+pattern Integer_parseInt1746918497(elem:Attribute, result:java Integer){
+    Attribute(elem);	result == eval(Integer.parseInt("150"));
+}
+
+pattern argument_1225437202(elem:Attribute, result: java String){
+    find n2_CAEXObject_name_AttrEClass(elem, result);
+}
+
+pattern SystemUnitClass_attribute1549385711(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:SystemUnitClass, member:Attribute){
+    find a1_OrGroup(member);
+    find SystemUnitClass_attribute1549385711(container,member);
+}
+

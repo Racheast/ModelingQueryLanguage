@@ -1,0 +1,9 @@
+Find SystemUnitClass{
+	attribute a1 : Attribute{
+		name n1 : self.length().greaterThan(0);
+		value v1 : self.isEmpty!();
+	}OR Attribute{
+		
+	}
+	eval: count(a1).greaterThan(1);
+}

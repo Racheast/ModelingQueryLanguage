@@ -1,0 +1,10 @@
+Find SystemUnitClass{
+	attribute a1 : Attribute{
+		name n1 : self.length().greaterThan(0);
+		value v1 : self.isEmpty!();
+	}OR Attribute{
+		name n2;
+		eval: Integer.parseInt(StringRef(n2)).greaterThan(Integer.parseInt("150").toString());
+	}
+	eval: count(a1).greaterThan(1);
+}

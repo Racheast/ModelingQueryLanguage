@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:qrmm="/QRMM/model/QRMM.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <qrmm:CAEXFile changeMode="state" fileName="PPU AML" schemaVersion="3.0">
+    <superiorStandardVersion>AutomationML 2.0</superiorStandardVersion>
+    <sourceDocumentInformation originID="TODO" originName="TODO" originProjectID="TODO" originProjectTitle="TODO" originRelease="TODO" originVendor="TODO" originVendorURL="TODO" originVersion="3.0"/>
+    <instanceHierarchy changeMode="state" name="PPU">
+      <internalElement baseSystemUnit="/0/@systemUnitClassLib.0/@systemUnitClass.0" changeMode="state" iD="" name="R1_Stack" refBaseClassPath="">
+        <attribute attributeDataType="" changeMode="state" name="R1_Length"/>
+        <attribute changeMode="state" name="R1_Width"/>
+        <attribute changeMode="state" name="R1_Heigth"/>
+        <internalElement changeMode="state" name="R1_Stack_Connection">
+          <externalInterface changeMode="state" name="R1_Stack_Port" xsi:type="qrmm:ExternalInterface"/>
+          <internalElement iD="" name="TEST_IE_1">
+            <attribute attributeDataType="" iD="102" name="weight" unit="" value="100"/>
+            <attribute iD="100" name="height" unit="" value="200">
+              <attribute name="height" unit="" value="200"/>
+            </attribute>
+            <internalElement name="TEST_IE_2">
+              <attribute changeMode="create" name="weight" value="50"/>
+            </internalElement>
+          </internalElement>
+          <roleRequirements changeMode="state" roleClass="/0/@roleClassLib.1/@roleClass.6">
+            <mappingObject changeMode="state">
+              <interfaceIDMapping changeMode="state" roleInterface="/0/@roleClassLib.1/@roleClass.6/@externalInterface.0" systemUnitInterface="/0/@instanceHierarchy.0/@internalElement.0/@internalElement.0/@externalInterface.0"/>
+            </mappingObject>
+          </roleRequirements>
+        </internalElement>
+        <supportedRoleClass changeMode="state" roleClass="/0/@roleClassLib.1/@roleClass.2"/>
+        <roleRequirements changeMode="state" roleClass="/0/@roleClassLib.0/@roleClass.0">
+          <mappingObject changeMode="state">
+            <attributeNameMapping changeMode="state" roleAttribute="/0/@roleClassLib.0/@roleClass.0/@attribute.0" roleAttributeName="" systemUnitAttribute="/0/@instanceHierarchy.0/@internalElement.0/@attribute.0"/>
+            <attributeNameMapping changeMode="state" roleAttribute="/0/@roleClassLib.0/@roleClass.0/@attribute.1" systemUnitAttribute="/0/@instanceHierarchy.0/@internalElement.0/@attribute.1" systemUnitAttributeName=""/>
+            <attributeNameMapping changeMode="state" roleAttribute="/0/@roleClassLib.0/@roleClass.0/@attribute.2" systemUnitAttribute="/0/@instanceHierarchy.0/@internalElement.0/@attribute.2"/>
+          </mappingObject>
+        </roleRequirements>
+      </internalElement>
+      <internalElement baseSystemUnit="/0/@systemUnitClassLib.0/@systemUnitClass.1" changeMode="state" iD="" name="R2_Crane" refBaseClassPath="">
+        <attribute attributeDataType="" changeMode="state" name="R2_Length"/>
+        <attribute changeMode="state" name="R2_Width"/>
+        <attribute changeMode="state" name="R2_Heigth"/>
+        <supportedRoleClass changeMode="state" roleClass="/0/@roleClassLib.1/@roleClass.2"/>
+        <roleRequirements changeMode="state" roleClass="/0/@roleClassLib.0/@roleClass.0">
+          <mappingObject changeMode="state">
+            <attributeNameMapping changeMode="state" roleAttribute="/0/@roleClassLib.0/@roleClass.0/@attribute.0" roleAttributeName="" systemUnitAttribute="/0/@instanceHierarchy.0/@internalElement.1/@attribute.0"/>
+            <attributeNameMapping changeMode="state" roleAttribute="/0/@roleClassLib.0/@roleClass.0/@attribute.1" systemUnitAttribute="/0/@instanceHierarchy.0/@internalElement.1/@attribute.1" systemUnitAttributeName=""/>
+            <attributeNameMapping changeMode="state" roleAttribute="/0/@roleClassLib.0/@roleClass.0/@attribute.2" roleAttributeName="" systemUnitAttribute="/0/@instanceHierarchy.0/@internalElement.1/@attribute.2"/>
+          </mappingObject>
+        </roleRequirements>
+      </internalElement>
+      <internalElement baseSystemUnit="/0/@instanceHierarchy.0/@internalElement.0" changeMode="state" name="Mirror_R1_Stack" refBaseClassPath="" refBaseSystemUnitPath="">
+        <attribute changeMode="state" name="NewAttr_in_Mirror"/>
+        <externalInterface changeMode="state" name="NewExtInt_in_Mirror" refBaseClassPath="" xsi:type="qrmm:ExternalInterface"/>
+      </internalElement>
+    </instanceHierarchy>
+    <interfaceClassLib changeMode="state" name="AutomationMLInterfaceClassLib">
+      <interfaceClass changeMode="state" name="AutomationMLBaseInterface">
+        <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0" changeMode="state" name="Order" refBaseClassPath=""/>
+        <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0" changeMode="state" name="PortConnector" refBaseClassPath=""/>
+        <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0" changeMode="state" name="InterlockingConnector" refBaseClassPath=""/>
+        <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0" changeMode="state" name="PPRConnector" refBaseClassPath=""/>
+        <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0" changeMode="state" name="ExternalDataConnector" refBaseClassPath="">
+          <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.4" changeMode="state" name="COLLADAInterface"/>
+          <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.4" changeMode="state" name="PLCOpenXMLConnector" refBaseClassPath=""/>
+        </interfaceClass>
+        <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0" changeMode="state" name="Communication" refBaseClassPath="">
+          <interfaceClass baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.5" changeMode="state" name="SignalInterface"/>
+        </interfaceClass>
+      </interfaceClass>
+    </interfaceClassLib>
+    <roleClassLib changeMode="state" name="PPUPropertySetRoleClassLib">
+      <roleClass changeMode="state" name="GeometryPropertySet">
+        <attribute changeMode="state" name="Geometry_Length"/>
+        <attribute changeMode="state" name="Geometry_Width"/>
+        <attribute changeMode="state" name="Geometry_Height"/>
+      </roleClass>
+    </roleClassLib>
+    <roleClassLib changeMode="state" name="AutomationMLBaseRole">
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Product"/>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Process"/>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Resource"/>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="PropertySet"/>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Group"/>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Facet"/>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Port">
+        <externalInterface changeMode="state" name="ConnectionPoint"/>
+      </roleClass>
+      <roleClass baseClass="/0/@roleClassLib.1/@roleClass.8" changeMode="state" name="Structure">
+        <roleClass baseClass="/0/@roleClassLib.1/@roleClass.7" changeMode="state" name="ProductStructure"/>
+        <roleClass baseClass="/0/@roleClassLib.1/@roleClass.7" changeMode="state" name="ProcessStructure"/>
+        <roleClass baseClass="/0/@roleClassLib.1/@roleClass.7" changeMode="state" name="ResourceStructure"/>
+      </roleClass>
+      <roleClass changeMode="state" name="AutomationMLBaseRole"/>
+    </roleClassLib>
+    <systemUnitClassLib changeMode="state" name="PPU SUClib">
+      <systemUnitClass changeMode="state" iD="" name="Stack">
+        <externalInterface baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.3" changeMode="state" name="Stack_Input" xsi:type="qrmm:ExternalInterface"/>
+        <externalInterface baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.3" changeMode="state" name="Stack_Output" xsi:type="qrmm:ExternalInterface"/>
+      </systemUnitClass>
+      <systemUnitClass changeMode="state" iD="" name="Crane">
+        <externalInterface baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.3" changeMode="state" name="Crane_Input" refBaseClassPath="" xsi:type="qrmm:ExternalInterface"/>
+        <externalInterface baseClass="/0/@interfaceClassLib.0/@interfaceClass.0/@interfaceClass.3" changeMode="state" name="Crane_Output" refBaseClassPath="" xsi:type="qrmm:ExternalInterface"/>
+      </systemUnitClass>
+    </systemUnitClassLib>
+  </qrmm:CAEXFile>
+  <qrmm:AdditionalInformation name="AutomationMLVersion" value="2.0"/>
+  <qrmm:AdditionalInformation/>
+</xmi:XMI>

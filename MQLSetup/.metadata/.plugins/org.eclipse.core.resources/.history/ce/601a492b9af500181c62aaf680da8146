@@ -1,0 +1,218 @@
+/**
+ * This is a copyright text.
+ */
+package qmm.impl;
+
+import java.lang.reflect.InvocationTargetException;
+
+import java.util.Collection;
+import java.util.Map;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import qmm.CAEXBasicObject;
+import qmm.CAEXObject;
+import qmm.SystemUnitClassLib;
+import qmm.SystemUnitClass_OrGroup;
+import qmm.qmmPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>System Unit Class Lib</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link qmm.impl.SystemUnitClassLibImpl#getSystemUnitClass <em>System Unit Class</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class SystemUnitClassLibImpl extends CAEXObjectImpl implements SystemUnitClassLib {
+	/**
+	 * The cached value of the '{@link #getSystemUnitClass() <em>System Unit Class</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSystemUnitClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SystemUnitClass_OrGroup> systemUnitClass;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemUnitClassLibImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return qmmPackage.eINSTANCE.getSystemUnitClassLib();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SystemUnitClass_OrGroup> getSystemUnitClass() {
+		if (systemUnitClass == null) {
+			systemUnitClass = new EObjectContainmentEList<SystemUnitClass_OrGroup>(SystemUnitClass_OrGroup.class, this, qmmPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS);
+		}
+		return systemUnitClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validate(final DiagnosticChain diagnostic, final Map context) {
+		if(diagnostic!=null){
+		    if(this.evaluationOperator != null){
+		    	EList<org.eclipse.emf.common.util.BasicDiagnostic> diagnosticList = validateCheckExpression(this.evaluationOperator);
+		    	for(int i=0; i<diagnosticList.size(); i++){
+		    		diagnostic.add((org.eclipse.emf.common.util.BasicDiagnostic)diagnosticList.get(i));
+		    	}
+		    }
+		}
+		
+		final int systemUnitClass_upperBound = -1;
+		int nr_nonTransitive_systemUnitClass = 0;
+		if(this.systemUnitClass != null){
+				for(qmm.OrGroup og : this.systemUnitClass) if(!og.isTransitive()) nr_nonTransitive_systemUnitClass++;
+		}
+		if(nr_nonTransitive_systemUnitClass > systemUnitClass_upperBound && systemUnitClass_upperBound > -1) diagnostic.add(new org.eclipse.emf.common.util.BasicDiagnostic(org.eclipse.emf.common.util.Diagnostic.ERROR, qmm.util.qmmValidator.DIAGNOSTIC_SOURCE,qmm.util.qmmValidator.OBJECT_FUNCTIONAL_PARAMETER__VALIDATE, "EClass contains " + nr_nonTransitive_systemUnitClass + " non-transitive systemUnitClass. Only " + systemUnitClass_upperBound + " are allowed.",new Object[] { this }));
+		
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case qmmPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS:
+				return ((InternalEList<?>)getSystemUnitClass()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case qmmPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS:
+				return getSystemUnitClass();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case qmmPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS:
+				getSystemUnitClass().clear();
+				getSystemUnitClass().addAll((Collection<? extends SystemUnitClass_OrGroup>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case qmmPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS:
+				getSystemUnitClass().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case qmmPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS:
+				return systemUnitClass != null && !systemUnitClass.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == CAEXBasicObject.class) {
+			switch (baseOperationID) {
+				case qmmPackage.CAEX_BASIC_OBJECT___VALIDATE__DIAGNOSTICCHAIN_MAP: return qmmPackage.SYSTEM_UNIT_CLASS_LIB___VALIDATE__DIAGNOSTICCHAIN_MAP;
+				default: return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		if (baseClass == CAEXObject.class) {
+			switch (baseOperationID) {
+				case qmmPackage.CAEX_OBJECT___VALIDATE__DIAGNOSTICCHAIN_MAP: return qmmPackage.SYSTEM_UNIT_CLASS_LIB___VALIDATE__DIAGNOSTICCHAIN_MAP;
+				default: return super.eDerivedOperationID(baseOperationID, baseClass);
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case qmmPackage.SYSTEM_UNIT_CLASS_LIB___VALIDATE__DIAGNOSTICCHAIN_MAP:
+				return validate((DiagnosticChain)arguments.get(0), (Map)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //SystemUnitClassLibImpl

@@ -1,0 +1,11 @@
+package qrmm
+import "/ModelingQueryLanguage/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Attribute2140418591(result);
+}
+
+pattern Attribute2140418591(elem:Attribute){
+    Attribute(elem);
+}
+

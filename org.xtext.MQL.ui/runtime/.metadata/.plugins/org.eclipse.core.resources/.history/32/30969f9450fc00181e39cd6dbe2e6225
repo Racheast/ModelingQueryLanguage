@@ -1,0 +1,36 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass774136416(result);
+}
+or{
+    find SystemUnitClass585578546(result);
+}
+
+pattern SystemUnitClass774136416(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern SystemUnitClass585578546(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    neg find n2_CAEXObject_name_AttrEClass(elem,n2);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:SystemUnitClass,n1){
+	SystemUnitClass.name(elem,n1);
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:SystemUnitClass,n2){
+	SystemUnitClass.name(elem,n2);
+}
+
+pattern InternalElement_attribute938367183(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern SystemUnitClass_attribute938367183(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+

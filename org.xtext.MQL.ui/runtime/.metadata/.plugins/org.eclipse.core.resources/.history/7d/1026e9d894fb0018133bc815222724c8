@@ -1,0 +1,82 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1177660029(result);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+    find InternalElement1374019054(elem);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern InternalElement1374019054(elem:InternalElement){
+    InternalElement(elem);
+    find n2_CAEXObject_name_AttrEClass(elem,n2);
+    find n5_CAEXObject_name_AttrEClass(elem,n5);
+    n2 != n5;
+    find count1914461368(elem, ref1914461368);
+    check(((ref1914461368)>=(0)));
+}
+
+pattern InternalElement1177660029(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find n4_CAEXObject_name_AttrEClass(elem,n4);
+    find a1_OrGroup_ref(elem,a1);
+    find ie1_OrGroup_ref(elem,ie1);
+    n1 != n4;
+    ie1 != n4;
+    n1 != a1;
+    ie1 != a1;
+    n1 != ie1;
+    n4 != a1;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+}
+
+pattern n4_CAEXObject_name_AttrEClass(elem:InternalElement,n4){
+	InternalElement.name(elem,n4);
+	find n1_CAEXObject_name_AttrEClass(elem,n1);
+    n1 != n4;
+	check(((n4).contains(n1)));
+}
+
+pattern n2_CAEXObject_name_AttrEClass(elem:InternalElement,n2){
+	InternalElement.name(elem,n2);
+}
+
+pattern n5_CAEXObject_name_AttrEClass(elem:InternalElement,n5){
+	InternalElement.name(elem,n5);
+	find n2_CAEXObject_name_AttrEClass(elem,n2);
+    n2 != n5;
+	check(((n5).contains(n2)));
+}
+
+pattern count1914461368(elem:InternalElement, result:java Integer){
+    result == count find n2_CAEXObject_name_AttrEClass(elem, n2);
+}
+
+pattern InternalElement_internalElement1516251609(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_attribute293104195(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern ie1_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie1_OrGroup(member);
+    find InternalElement_internalElement1516251609(container,member);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute293104195(container,member);
+}
+

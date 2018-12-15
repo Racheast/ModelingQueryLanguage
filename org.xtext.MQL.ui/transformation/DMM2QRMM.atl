@@ -1,0 +1,488 @@
+-- @atlcompiler emftvm
+-- @path DMM=/MQLSetup/model/DMM.ecore
+-- @path QRMM=/QRMM/model/QRMM.ecore
+
+module DMM2QRMM;
+create OUT : QRMM from IN : DMM;
+
+-- @extends Attribute2Attribute
+rule AttributeFamily2AttributeFamily{
+    from
+        s : DMM!AttributeFamily
+    to
+        t : QRMM!AttributeFamily(
+
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule AttributeNameMapping2AttributeNameMapping{
+    from
+        s : DMM!AttributeNameMapping
+    to
+        t : QRMM!AttributeNameMapping(
+            roleAttributeName <- s.roleAttributeName,
+            systemUnitAttributeName <- s.systemUnitAttributeName,
+            roleAttribute <- s.roleAttribute,
+            systemUnitAttribute <- s.systemUnitAttribute
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule Attribute2Attribute{
+    from
+        s : DMM!Attribute
+    to
+        t : QRMM!Attribute(
+            defaultValue <- s.defaultValue,
+            value <- s.value,
+            refSemantic <- s.refSemantic,
+            constraint <- s.constraint,
+            attribute <- s.attribute,
+            attributeDataType <- s.attributeDataType,
+            refAttributeType <- s.refAttributeType,
+            unit <- s.unit
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule AttributeLib2AttributeLib{
+    from
+        s : DMM!AttributeLib
+    to
+        t : QRMM!AttributeLib(
+            attributeType <- s.attributeType
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule AttributeValueRequirement2AttributeValueRequirement{
+    from
+        s : DMM!AttributeValueRequirement
+    to
+        t : QRMM!AttributeValueRequirement(
+            ordinalScaledType <- s.ordinalScaledType,
+            nominalScaledType <- s.nominalScaledType,
+            unknownType <- s.unknownType,
+            name <- s.name
+        )
+}
+
+
+rule CAEXBasicObject2CAEXBasicObject{
+    from
+        s : DMM!CAEXBasicObject
+    to
+        t : QRMM!CAEXBasicObject(
+            changeMode <- s.changeMode,
+            description <- s.description,
+            version <- s.version,
+            revision <- s.revision,
+            copyright <- s.copyright,
+            additionalInformation <- s.additionalInformation
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule CAEXFile2CAEXFile{
+    from
+        s : DMM!CAEXFile
+    to
+        t : QRMM!CAEXFile(
+            superiorStandardVersion <- s.superiorStandardVersion,
+            sourceDocumentInformation <- s.sourceDocumentInformation,
+            externalReference <- s.externalReference,
+            instanceHierarchy <- s.instanceHierarchy,
+            interfaceClassLib <- s.interfaceClassLib,
+            roleClassLib <- s.roleClassLib,
+            systemUnitClassLib <- s.systemUnitClassLib,
+            attributeTypeLib <- s.attributeTypeLib,
+            fileName <- s.fileName,
+            schemaVersion <- s.schemaVersion
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule CAEXObject2CAEXObject{
+    from
+        s : DMM!CAEXObject
+    to
+        t : QRMM!CAEXObject(
+            iD <- s.iD,
+            name <- s.name
+        )
+}
+
+
+rule DocumentRoot2DocumentRoot{
+    from
+        s : DMM!DocumentRoot
+    to
+        t : QRMM!DocumentRoot(
+            mixed <- s.mixed,
+            xMLNSPrefixMap <- s.xMLNSPrefixMap,
+            xSISchemaLocation <- s.xSISchemaLocation,
+            cAEXFile <- s.cAEXFile
+        )
+}
+
+-- @extends InterfaceClass2InterfaceClass
+rule ExternalInterface2ExternalInterface{
+    from
+        s : DMM!ExternalInterface
+    to
+        t : QRMM!ExternalInterface(
+            externalInterface <- s.externalInterface
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule ExternalReferenceType2ExternalReferenceType{
+    from
+        s : DMM!ExternalReferenceType
+    to
+        t : QRMM!ExternalReferenceType(
+            alias <- s.alias,
+            path <- s.path
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule InstanceHierarchy2InstanceHierarchy{
+    from
+        s : DMM!InstanceHierarchy
+    to
+        t : QRMM!InstanceHierarchy(
+            internalElement <- s.internalElement
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule InterfaceClassLib2InterfaceClassLib{
+    from
+        s : DMM!InterfaceClassLib
+    to
+        t : QRMM!InterfaceClassLib(
+            interfaceClass <- s.interfaceClass
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule InterfaceClass2InterfaceClass{
+    from
+        s : DMM!InterfaceClass
+    to
+        t : QRMM!InterfaceClass(
+            attribute <- s.attribute,
+            refBaseClassPath <- s.refBaseClassPath,
+            baseClass <- s.baseClass,
+            interfaceClass <- s.interfaceClass
+        )
+}
+
+-- @extends InterfaceClass2InterfaceClass
+rule InterfaceFamily2InterfaceFamily{
+    from
+        s : DMM!InterfaceFamily
+    to
+        t : QRMM!InterfaceFamily(
+
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule InterfaceIDMapping2InterfaceIDMapping{
+    from
+        s : DMM!InterfaceIDMapping
+    to
+        t : QRMM!InterfaceIDMapping(
+            roleInterfaceID <- s.roleInterfaceID,
+            systemUnitInterfaceID <- s.systemUnitInterfaceID,
+            roleInterface <- s.roleInterface,
+            systemUnitInterface <- s.systemUnitInterface
+        )
+}
+
+-- @extends SystemUnitClass2SystemUnitClass
+rule InternalElement2InternalElement{
+    from
+        s : DMM!InternalElement
+    to
+        t : QRMM!InternalElement(
+            roleRequirements <- s.roleRequirements,
+            refBaseSystemUnitPath <- s.refBaseSystemUnitPath,
+            baseSystemUnit <- s.baseSystemUnit
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule InternalLink2InternalLink{
+    from
+        s : DMM!InternalLink
+    to
+        t : QRMM!InternalLink(
+            refPartnerSideA <- s.refPartnerSideA,
+            refPartnerSideB <- s.refPartnerSideB,
+            partnerSideA <- s.partnerSideA,
+            partnerSideB <- s.partnerSideB
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule Mapping2Mapping{
+    from
+        s : DMM!Mapping
+    to
+        t : QRMM!Mapping(
+            attributeNameMapping <- s.attributeNameMapping,
+            interfaceIDMapping <- s.interfaceIDMapping
+        )
+}
+
+
+rule NominalScaledType2NominalScaledType{
+    from
+        s : DMM!NominalScaledType
+    to
+        t : QRMM!NominalScaledType(
+            requiredValue <- s.requiredValue
+        )
+}
+
+
+rule OrdinalScaledType2OrdinalScaledType{
+    from
+        s : DMM!OrdinalScaledType
+    to
+        t : QRMM!OrdinalScaledType(
+            requiredMaxValue <- s.requiredMaxValue,
+            requiredValue <- s.requiredValue,
+            requiredMinValue <- s.requiredMinValue
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule RefSemantic2RefSemantic{
+    from
+        s : DMM!RefSemantic
+    to
+        t : QRMM!RefSemantic(
+            correspondingAttributePath <- s.correspondingAttributePath
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule RoleClassLib2RoleClassLib{
+    from
+        s : DMM!RoleClassLib
+    to
+        t : QRMM!RoleClassLib(
+            roleClass <- s.roleClass
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule RoleClass2RoleClass{
+    from
+        s : DMM!RoleClass
+    to
+        t : QRMM!RoleClass(
+            attribute <- s.attribute,
+            externalInterface <- s.externalInterface,
+            refBaseClassPath <- s.refBaseClassPath,
+            baseClass <- s.baseClass,
+            roleClass <- s.roleClass
+        )
+}
+
+-- @extends RoleClass2RoleClass
+rule RoleFamily2RoleFamily{
+    from
+        s : DMM!RoleFamily
+    to
+        t : QRMM!RoleFamily(
+
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule RoleRequirements2RoleRequirements{
+    from
+        s : DMM!RoleRequirements
+    to
+        t : QRMM!RoleRequirements(
+            attribute <- s.attribute,
+            externalInterface <- s.externalInterface,
+            mappingObject <- s.mappingObject,
+            roleClass <- s.roleClass
+        )
+}
+
+
+rule SourceDocumentInformation2SourceDocumentInformation{
+    from
+        s : DMM!SourceDocumentInformation
+    to
+        t : QRMM!SourceDocumentInformation(
+            lastWritingDateTime <- s.lastWritingDateTime,
+            originID <- s.originID,
+            originName <- s.originName,
+            originProjectID <- s.originProjectID,
+            originProjectTitle <- s.originProjectTitle,
+            originRelease <- s.originRelease,
+            originVendor <- s.originVendor,
+            originVendorURL <- s.originVendorURL,
+            originVersion <- s.originVersion
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule SupportedRoleClass2SupportedRoleClass{
+    from
+        s : DMM!SupportedRoleClass
+    to
+        t : QRMM!SupportedRoleClass(
+            mappingObject <- s.mappingObject,
+            refRoleClassPath <- s.refRoleClassPath,
+            roleClass <- s.roleClass
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule SystemUnitClassLib2SystemUnitClassLib{
+    from
+        s : DMM!SystemUnitClassLib
+    to
+        t : QRMM!SystemUnitClassLib(
+            systemUnitClass <- s.systemUnitClass
+        )
+}
+
+-- @extends CAEXObject2CAEXObject
+rule SystemUnitClass2SystemUnitClass{
+    from
+        s : DMM!SystemUnitClass
+    to
+        t : QRMM!SystemUnitClass(
+            attribute <- s.attribute,
+            externalInterface <- s.externalInterface,
+            internalElement <- s.internalElement,
+            supportedRoleClass <- s.supportedRoleClass,
+            internalLink <- s.internalLink,
+            baseClass <- s.baseClass,
+            systemUnitClass <- s.systemUnitClass,
+            refBaseClassPath <- s.refBaseClassPath
+        )
+}
+
+-- @extends SystemUnitClass2SystemUnitClass
+rule SystemUnitFamily2SystemUnitFamily{
+    from
+        s : DMM!SystemUnitFamily
+    to
+        t : QRMM!SystemUnitFamily(
+
+        )
+}
+
+
+rule UnknownType2UnknownType{
+    from
+        s : DMM!UnknownType
+    to
+        t : QRMM!UnknownType(
+            requirements <- s.requirements
+        )
+}
+
+
+rule Copyright2Copyright{
+    from
+        s : DMM!Copyright
+    to
+        t : QRMM!Copyright(
+            value <- s.value,
+            changeMode <- s.changeMode
+        )
+}
+
+
+rule Description2Description{
+    from
+        s : DMM!Description
+    to
+        t : QRMM!Description(
+            value <- s.value,
+            changeMode <- s.changeMode
+        )
+}
+
+-- @extends CAEXBasicObject2CAEXBasicObject
+rule Revision2Revision{
+    from
+        s : DMM!Revision
+    to
+        t : QRMM!Revision(
+            revisionDate <- s.revisionDate,
+            oldVersion <- s.oldVersion,
+            newVersion <- s.newVersion,
+            authorName <- s.authorName,
+            comment <- s.comment
+        )
+}
+
+
+rule Version2Version{
+    from
+        s : DMM!Version
+    to
+        t : QRMM!Version(
+            value <- s.value,
+            changeMode <- s.changeMode
+        )
+}
+
+-- @extends GenericElement2GenericElement
+rule AdditionalInformation2AdditionalInformation{
+    from
+        s : DMM!AdditionalInformation
+    to
+        t : QRMM!AdditionalInformation(
+
+        )
+}
+
+
+abstract rule Element2Element{
+    from
+        s : DMM!Element
+    to
+        t : QRMM!Element(
+            name <- s.name,
+            value <- s.value
+        )
+}
+
+-- @extends Element2Element
+rule GenericElement2GenericElement{
+    from
+        s : DMM!GenericElement
+    to
+        t : QRMM!GenericElement(
+            nestedElements <- s.nestedElements,
+            attributes <- s.attributes,
+            elementFeatureMap <- s.elementFeatureMap,
+            attributeFeatureMap <- s.attributeFeatureMap
+        )
+}
+
+-- @extends Element2Element
+rule GenericAttribute2GenericAttribute{
+    from
+        s : DMM!GenericAttribute
+    to
+        t : QRMM!GenericAttribute(
+
+        )
+}
+

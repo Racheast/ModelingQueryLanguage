@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ This is a copyright text.
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated QMM -->
+      <package
+            uri="/MQLSetup/model/QMM.ecore"
+            class="qmm.qmmPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated QMM -->
+      <parser
+            type="qmm"
+            class="qmm.util.qmmResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

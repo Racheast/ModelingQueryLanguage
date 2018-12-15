@@ -1,0 +1,7 @@
+Find SystemUnitClass{
+	attribute a1 :Attribute{
+		iD id1;
+		eval: Integer.parseInt(StringRef(id1)).greaterThan(Integer.parseInt("150"));
+	}
+	eval: count(a1).greaterThan(0);
+}

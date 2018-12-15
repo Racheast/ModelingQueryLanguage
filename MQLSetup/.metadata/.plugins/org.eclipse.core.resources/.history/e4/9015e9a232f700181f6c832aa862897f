@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="qmm" nsURI="LocalQMM/model/QMM.ecore" nsPrefix="qmm">
+  <eClassifiers xsi:type="ecore:EDataType" name="AttributeDataType" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeFamily" eSuperTypes="#//Attribute #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeNameMapping" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleAttribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitAttribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleAttributeName_AttrEClass"
+        eType="#//AttributeNameMapping_roleAttributeName_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitAttributeName_AttrEClass"
+        eType="#//AttributeNameMapping_systemUnitAttributeName_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refSemantic" upperBound="-1"
+        eType="#//RefSemantic_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+        eType="#//AttributeValueRequirement_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue_AttrEClass"
+        eType="#//Attribute_defaultValue_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value_AttrEClass" eType="#//Attribute_value_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeDataType_AttrEClass"
+        eType="#//Attribute_attributeDataType_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refAttributeType_AttrEClass"
+        eType="#//Attribute_refAttributeType_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit_AttrEClass" eType="#//Attribute_unit_AttrEClass"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeLib" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeType" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeValueRequirement" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ordinalScaledType" upperBound="-1"
+        eType="#//OrdinalScaledType_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nominalScaledType" upperBound="-1"
+        eType="#//NominalScaledType_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unknownType" upperBound="-1"
+        eType="#//UnknownType_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name_AttrEClass" eType="#//AttributeValueRequirement_name_AttrEClass"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXBasicObject" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" upperBound="-1"
+        eType="#//Description_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="version" upperBound="-1"
+        eType="#//Version_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="revision" upperBound="-1"
+        eType="#//Revision_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="copyright" upperBound="-1"
+        eType="#//Copyright_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalInformation"
+        upperBound="-1" eType="#//AdditionalInformation_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changeMode_AttrEClass"
+        eType="#//CAEXBasicObject_changeMode_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXFile" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceDocumentInformation"
+        upperBound="-1" eType="#//SourceDocumentInformation_OrGroup" containment="true"
+        resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalReference" upperBound="-1"
+        eType="#//ExternalReferenceType_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instanceHierarchy" upperBound="-1"
+        eType="#//InstanceHierarchy_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceClassLib" upperBound="-1"
+        eType="#//InterfaceClassLib_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleClassLib" upperBound="-1"
+        eType="#//RoleClassLib_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitClassLib" upperBound="-1"
+        eType="#//SystemUnitClassLib_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeTypeLib" upperBound="-1"
+        eType="#//AttributeLib_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superiorStandardVersion_AttrEClass"
+        upperBound="-1" eType="#//CAEXFile_superiorStandardVersion_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fileName_AttrEClass" eType="#//CAEXFile_fileName_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="schemaVersion_AttrEClass"
+        eType="#//CAEXFile_schemaVersion_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXObject" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iD_AttrEClass" eType="#//CAEXObject_iD_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name_AttrEClass" eType="#//CAEXObject_name_AttrEClass"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ChangeMode">
+    <eLiterals name="state"/>
+    <eLiterals name="create" value="1"/>
+    <eLiterals name="delete" value="2"/>
+    <eLiterals name="change" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ChangeModeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cAEXFile" upperBound="-1"
+        eType="#//CAEXFile_OrGroup" volatile="true" transient="true" derived="true"
+        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mixed_AttrEClass" upperBound="-1"
+        eType="#//DocumentRoot_mixed_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalInterface" eSuperTypes="#//InterfaceClass #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalInterface" upperBound="-1"
+        eType="#//InterfaceClass_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalReferenceType" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alias_AttrEClass" eType="#//ExternalReferenceType_alias_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="path_AttrEClass" eType="#//ExternalReferenceType_path_AttrEClass"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InstanceHierarchy" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalElement" upperBound="-1"
+        eType="#//InternalElement_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceClassLib" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceClass" upperBound="-1"
+        eType="#//InterfaceClass_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceClass" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseClass" upperBound="-1"
+        eType="#//InterfaceClass_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceClass" upperBound="-1"
+        eType="#//InterfaceClass_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refBaseClassPath_AttrEClass"
+        eType="#//InterfaceClass_refBaseClassPath_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceFamily" eSuperTypes="#//InterfaceClass #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceIDMapping" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleInterface" upperBound="-1"
+        eType="#//ExternalInterface_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitInterface" upperBound="-1"
+        eType="#//ExternalInterface_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleInterfaceID_AttrEClass"
+        eType="#//InterfaceIDMapping_roleInterfaceID_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitInterfaceID_AttrEClass"
+        eType="#//InterfaceIDMapping_systemUnitInterfaceID_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalElement" eSuperTypes="#//SystemUnitClass #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleRequirements" upperBound="-1"
+        eType="#//RoleRequirements_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseSystemUnit" upperBound="-1"
+        eType="#//SystemUnitClass_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refBaseSystemUnitPath_AttrEClass"
+        eType="#//InternalElement_refBaseSystemUnitPath_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalLink" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partnerSideA" upperBound="-1"
+        eType="#//ExternalInterface_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partnerSideB" upperBound="-1"
+        eType="#//ExternalInterface_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refPartnerSideA_AttrEClass"
+        eType="#//InternalLink_refPartnerSideA_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refPartnerSideB_AttrEClass"
+        eType="#//InternalLink_refPartnerSideB_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mapping" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeNameMapping" upperBound="-1"
+        eType="#//AttributeNameMapping_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceIDMapping" upperBound="-1"
+        eType="#//InterfaceIDMapping_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NominalScaledType" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredValue_AttrEClass"
+        upperBound="-1" eType="#//NominalScaledType_requiredValue_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinalScaledType" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredMaxValue_AttrEClass"
+        eType="#//OrdinalScaledType_requiredMaxValue_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredValue_AttrEClass"
+        eType="#//OrdinalScaledType_requiredValue_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredMinValue_AttrEClass"
+        eType="#//OrdinalScaledType_requiredMinValue_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RefSemantic" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correspondingAttributePath_AttrEClass"
+        eType="#//RefSemantic_correspondingAttributePath_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleClassLib" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleClass" upperBound="-1"
+        eType="#//RoleClass_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleClass" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalInterface" upperBound="-1"
+        eType="#//ExternalInterface_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseClass" upperBound="-1"
+        eType="#//RoleClass_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleClass" upperBound="-1"
+        eType="#//RoleClass_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refBaseClassPath_AttrEClass"
+        eType="#//RoleClass_refBaseClassPath_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleFamily" eSuperTypes="#//RoleClass #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRequirements" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalInterface" upperBound="-1"
+        eType="#//InterfaceClass_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingObject" upperBound="-1"
+        eType="#//Mapping_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleClass" upperBound="-1"
+        eType="#//RoleClass_OrGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lastWritingDateTime_AttrEClass"
+        eType="#//SourceDocumentInformation_lastWritingDateTime_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originID_AttrEClass" eType="#//SourceDocumentInformation_originID_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originName_AttrEClass"
+        eType="#//SourceDocumentInformation_originName_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originProjectID_AttrEClass"
+        eType="#//SourceDocumentInformation_originProjectID_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originProjectTitle_AttrEClass"
+        eType="#//SourceDocumentInformation_originProjectTitle_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originRelease_AttrEClass"
+        eType="#//SourceDocumentInformation_originRelease_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originVendor_AttrEClass"
+        eType="#//SourceDocumentInformation_originVendor_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originVendorURL_AttrEClass"
+        eType="#//SourceDocumentInformation_originVendorURL_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originVersion_AttrEClass"
+        eType="#//SourceDocumentInformation_originVersion_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportedRoleClass" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingObject" upperBound="-1"
+        eType="#//Mapping_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleClass" upperBound="-1"
+        eType="#//RoleClass_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refRoleClassPath_AttrEClass"
+        eType="#//SupportedRoleClass_refRoleClassPath_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemUnitClassLib" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitClass" upperBound="-1"
+        eType="#//SystemUnitClass_OrGroup" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemUnitClass" eSuperTypes="#//CAEXObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
+        eType="#//Attribute_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalInterface" upperBound="-1"
+        eType="#//InterfaceClass_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalElement" upperBound="-1"
+        eType="#//InternalElement_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedRoleClass" upperBound="-1"
+        eType="#//SupportedRoleClass_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalLink" upperBound="-1"
+        eType="#//InternalLink_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseClass" upperBound="-1"
+        eType="#//SystemUnitClass_OrGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnitClass" upperBound="-1"
+        eType="#//SystemUnitClass_OrGroup" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refBaseClassPath_AttrEClass"
+        eType="#//SystemUnitClass_refBaseClassPath_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemUnitFamily" eSuperTypes="#//SystemUnitClass #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnknownType" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirements_AttrEClass"
+        eType="#//UnknownType_requirements_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Copyright" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value_AttrEClass" eType="#//Copyright_value_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changeMode_AttrEClass"
+        eType="#//Copyright_changeMode_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Description" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value_AttrEClass" eType="#//Description_value_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changeMode_AttrEClass"
+        eType="#//Description_changeMode_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision" eSuperTypes="#//CAEXBasicObject #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="revisionDate_AttrEClass"
+        eType="#//Revision_revisionDate_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oldVersion_AttrEClass"
+        eType="#//Revision_oldVersion_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newVersion_AttrEClass"
+        eType="#//Revision_newVersion_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorName_AttrEClass"
+        eType="#//Revision_authorName_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comment_AttrEClass" eType="#//Revision_comment_AttrEClass"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Version" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value_AttrEClass" eType="#//Version_value_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changeMode_AttrEClass"
+        eType="#//Version_changeMode_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdditionalInformation" eSuperTypes="#//GenericElement #//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true" eSuperTypes="#//RootClass">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name_AttrEClass" eType="#//Element_name_AttrEClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value_AttrEClass" eType="#//Element_value_AttrEClass"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericElement" eSuperTypes="#//Element #//RootClass">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="empty"/>
+    </eAnnotations>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nestedElements" upperBound="-1"
+        eType="#//GenericElement_OrGroup" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="empty"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//GenericAttribute_OrGroup" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="empty"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementFeatureMap_AttrEClass"
+        upperBound="-1" eType="#//GenericElement_elementFeatureMap_AttrEClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeFeatureMap_AttrEClass"
+        upperBound="-1" eType="#//GenericElement_attributeFeatureMap_AttrEClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericAttribute" eSuperTypes="#//Element #//RootClass">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="empty"/>
+    </eAnnotations>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Countable" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NegatableElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="negated" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrGroup" abstract="true" eSuperTypes="#//NamedElement #//Countable #//NegatableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transitive" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypedElement" abstract="true">
+    <eOperations name="getType" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RootClass" abstract="true">
+    <eOperations name="validateCheckExpression" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+      <eParameters name="o" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EvaluationOperator" eType="#//EvaluationOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FindQuery" eSuperTypes="#//Query">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="where" lowerBound="1" upperBound="-1"
+        eType="#//RootClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Calculateable" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CalculateableElement" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeEClass" abstract="true" eSuperTypes="#//NamedElement #//NegatableElement #//Countable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RegularAttributeEClass" abstract="true"
+      eSuperTypes="#//AttributeEClass">
+    <eOperations name="validateCheckExpression" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+      <eParameters name="o" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationAttributeEClass" abstract="true"
+      eSuperTypes="#//AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalType" abstract="true" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Argument" abstract="true" eSuperTypes="#//TypedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceArgument" abstract="true" eSuperTypes="#//Argument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Countable_ReferenceArgument" eSuperTypes="#//ReferenceArgument">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//Countable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Calculateable_Argument" abstract="true"
+      eSuperTypes="#//ReferenceArgument #//FunctionalArgument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CalculateableElement_ReferenceArgument"
+      abstract="true" eSuperTypes="#//Calculateable_Argument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalArgument" abstract="true"
+      eSuperTypes="#//Argument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationOperation_Argument" abstract="true"
+      eSuperTypes="#//Calculateable_Argument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveArgument" abstract="true" eSuperTypes="#//FunctionalArgument"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" abstract="true" eSuperTypes="#//TypedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CountableReferenceParameter" eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="argument" lowerBound="1"
+        eType="#//Countable_ReferenceArgument" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalculateableParameter" abstract="true"
+      eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="argument" lowerBound="1"
+        eType="#//Calculateable_Argument" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalParameter" abstract="true"
+      eSuperTypes="#//Parameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="argument" lowerBound="1"
+        eType="#//FunctionalArgument" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_CalculateableElement" abstract="true"
+      eSuperTypes="#//Integer_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Operator" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionOperator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationOperator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BitOperator" abstract="true" eSuperTypes="#//ExpressionOperator #//NegatableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//TypedElement">
+    <eOperations name="getLastOperator" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassOperator" abstract="true" eSuperTypes="#//EvaluationFunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationOperator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationFunctionalOperator" abstract="true"
+      eSuperTypes="#//EvaluationOperator #//FunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregationOperator" abstract="true"
+      eSuperTypes="#//EvaluationFunctionalOperator #//Integer_Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationBitOperator" abstract="true"
+      eSuperTypes="#//EvaluationOperator #//BitOperator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//EvaluationOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="And_EvaluationBitOperator" eSuperTypes="#//EvaluationBitOperator">
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Or_EvaluationBitOperator" eSuperTypes="#//EvaluationBitOperator">
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CountingAggregationOperator" abstract="true"
+      eSuperTypes="#//AggregationOperator">
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="countable" lowerBound="1"
+        eType="#//CountableReferenceParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalculatingAggregationOperator" abstract="true"
+      eSuperTypes="#//AggregationOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String_CalculateableElement" abstract="true"
+      eSuperTypes="#//String_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String_AttributeEClass" abstract="true"
+      eSuperTypes="#//RegularAttributeEClass #//String_CalculateableElement">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//String_ExpressionOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_Operator" abstract="true" eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String_Type" abstract="true" eSuperTypes="#//Type #//CharSequence_Type">
+    <eAnnotations source="information">
+      <details key="type" value="String"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_FunctionalType" abstract="true"
+      eSuperTypes="#//String_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//String_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_CalculateableParameter" eSuperTypes="#//String_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_FunctionalParameter" eSuperTypes="#//String_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_Argument" abstract="true" eSuperTypes="#//FunctionalArgument #//String_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="String_PrimitiveArgument" eSuperTypes="#//String_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//String_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="String"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_CalculateableElementReferenceArgument"
+      eSuperTypes="#//CalculateableElement_ReferenceArgument #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="functionalType" value="String"/>
+    </eAnnotations>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//String_CalculateableElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//String_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="String"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_BitOperator" abstract="true"
+      eSuperTypes="#//String_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="String"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//String_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_And_BitOperator" eSuperTypes="#//String_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="String"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_Or_BitOperator" eSuperTypes="#//String_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="String"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_Original_FunctionalOperator"
+      abstract="true" eSuperTypes="#//String_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="String"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeNameMapping_roleAttributeName_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeNameMapping_systemUnitAttributeName_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute_defaultValue_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute_value_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_CalculateableElement"
+      abstract="true" eSuperTypes="#//AttributeDataType_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_AttributeEClass" abstract="true"
+      eSuperTypes="#//RegularAttributeEClass #//AttributeDataType_CalculateableElement">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//AttributeDataType_ExpressionOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_Operator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_Type" abstract="true"
+      eSuperTypes="#//Type">
+    <eAnnotations source="information">
+      <details key="type" value="AttributeDataType"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_FunctionalType" abstract="true"
+      eSuperTypes="#//AttributeDataType_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//AttributeDataType_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_CalculateableParameter"
+      eSuperTypes="#//AttributeDataType_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_FunctionalParameter"
+      eSuperTypes="#//AttributeDataType_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_Argument" abstract="true"
+      eSuperTypes="#//FunctionalArgument #//AttributeDataType_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_PrimitiveArgument"
+      eSuperTypes="#//AttributeDataType_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//AttributeDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//AttributeDataType_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="AttributeDataType"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_CalculateableElementReferenceArgument"
+      eSuperTypes="#//CalculateableElement_ReferenceArgument #//AttributeDataType_FunctionalType">
+    <eAnnotations source="information">
+      <details key="functionalType" value="AttributeDataType"/>
+    </eAnnotations>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//AttributeDataType_CalculateableElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_ExpressionOperator"
+      abstract="true" eSuperTypes="#//ExpressionOperator #//AttributeDataType_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="AttributeDataType"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_BitOperator" abstract="true"
+      eSuperTypes="#//AttributeDataType_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="AttributeDataType"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//AttributeDataType_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_And_BitOperator" eSuperTypes="#//AttributeDataType_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="AttributeDataType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_Or_BitOperator" eSuperTypes="#//AttributeDataType_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="AttributeDataType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeDataType_FunctionalOperator"
+      abstract="true" eSuperTypes="#//AttributeDataType_ExpressionOperator #//FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="AttributeDataType"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute_attributeDataType_AttrEClass"
+      eSuperTypes="#//AttributeDataType_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute_refAttributeType_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute_unit_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeValueRequirement_name_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeMode_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeMode_CalculateableElement" abstract="true"
+      eSuperTypes="#//ChangeMode_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeMode_Operator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeMode_EnumerationOperator" eSuperTypes="#//EnumerationOperator #//ChangeMode_Operator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="argument" lowerBound="1"
+        eType="#//ChangeMode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="or" eType="#//ChangeMode_EnumerationOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangeMode_AttributeEClass" abstract="true"
+      eSuperTypes="#//EnumerationAttributeEClass">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//ChangeMode_EnumerationOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXBasicObject_changeMode_AttrEClass"
+      eSuperTypes="#//ChangeMode_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXFile_superiorStandardVersion_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXFile_fileName_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXFile_schemaVersion_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXObject_iD_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXObject_name_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_CalculateableElement"
+      abstract="true" eSuperTypes="#//EFeatureMapEntry_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_AttributeEClass" abstract="true"
+      eSuperTypes="#//RegularAttributeEClass #//EFeatureMapEntry_CalculateableElement">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//EFeatureMapEntry_ExpressionOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_Operator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_Type" abstract="true"
+      eSuperTypes="#//Type">
+    <eAnnotations source="information">
+      <details key="type" value="EFeatureMapEntry"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_FunctionalType" abstract="true"
+      eSuperTypes="#//EFeatureMapEntry_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//EFeatureMapEntry_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_CalculateableParameter"
+      eSuperTypes="#//EFeatureMapEntry_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_FunctionalParameter"
+      eSuperTypes="#//EFeatureMapEntry_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_Argument" abstract="true"
+      eSuperTypes="#//FunctionalArgument #//EFeatureMapEntry_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_PrimitiveArgument"
+      eSuperTypes="#//EFeatureMapEntry_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//EFeatureMapEntry_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="EFeatureMapEntry"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_CalculateableElementReferenceArgument"
+      eSuperTypes="#//CalculateableElement_ReferenceArgument #//EFeatureMapEntry_FunctionalType">
+    <eAnnotations source="information">
+      <details key="functionalType" value="EFeatureMapEntry"/>
+    </eAnnotations>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//EFeatureMapEntry_CalculateableElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_ExpressionOperator"
+      abstract="true" eSuperTypes="#//ExpressionOperator #//EFeatureMapEntry_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="EFeatureMapEntry"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_BitOperator" abstract="true"
+      eSuperTypes="#//EFeatureMapEntry_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="EFeatureMapEntry"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//EFeatureMapEntry_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_And_BitOperator" eSuperTypes="#//EFeatureMapEntry_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="EFeatureMapEntry"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_Or_BitOperator" eSuperTypes="#//EFeatureMapEntry_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="EFeatureMapEntry"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntry_FunctionalOperator"
+      abstract="true" eSuperTypes="#//EFeatureMapEntry_ExpressionOperator #//FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="EFeatureMapEntry"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot_mixed_AttrEClass" eSuperTypes="#//EFeatureMapEntry_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalReferenceType_alias_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalReferenceType_path_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceClass_refBaseClassPath_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceIDMapping_roleInterfaceID_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceIDMapping_systemUnitInterfaceID_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalElement_refBaseSystemUnitPath_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalLink_refPartnerSideA_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalLink_refPartnerSideB_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NominalScaledType_requiredValue_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinalScaledType_requiredMaxValue_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinalScaledType_requiredValue_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinalScaledType_requiredMinValue_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RefSemantic_correspondingAttributePath_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleClass_refBaseClassPath_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_CalculateableElement" abstract="true"
+      eSuperTypes="#//DateTime_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_AttributeEClass" abstract="true"
+      eSuperTypes="#//RegularAttributeEClass #//DateTime_CalculateableElement">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//DateTime_ExpressionOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_Operator" abstract="true" eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_Type" abstract="true" eSuperTypes="#//Type">
+    <eAnnotations source="information">
+      <details key="type" value="DateTime"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_FunctionalType" abstract="true"
+      eSuperTypes="#//DateTime_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//DateTime_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_CalculateableParameter" eSuperTypes="#//DateTime_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_FunctionalParameter" eSuperTypes="#//DateTime_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_Argument" abstract="true" eSuperTypes="#//FunctionalArgument #//DateTime_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_PrimitiveArgument" eSuperTypes="#//DateTime_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DateTime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//DateTime_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="DateTime"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_CalculateableElementReferenceArgument"
+      eSuperTypes="#//CalculateableElement_ReferenceArgument #//DateTime_FunctionalType">
+    <eAnnotations source="information">
+      <details key="functionalType" value="DateTime"/>
+    </eAnnotations>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//DateTime_CalculateableElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//DateTime_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="DateTime"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_BitOperator" abstract="true"
+      eSuperTypes="#//DateTime_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="DateTime"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//DateTime_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_And_BitOperator" eSuperTypes="#//DateTime_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="DateTime"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_Or_BitOperator" eSuperTypes="#//DateTime_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="DateTime"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTime_FunctionalOperator" abstract="true"
+      eSuperTypes="#//DateTime_ExpressionOperator #//FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="DateTime"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_lastWritingDateTime_AttrEClass"
+      eSuperTypes="#//DateTime_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originID_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originName_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originProjectID_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originProjectTitle_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originRelease_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originVendor_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originVendorURL_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_originVersion_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportedRoleClass_refRoleClassPath_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemUnitClass_refBaseClassPath_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnknownType_requirements_AttrEClass"
+      eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Copyright_value_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Copyright_changeMode_AttrEClass" eSuperTypes="#//ChangeMode_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Description_value_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Description_changeMode_AttrEClass" eSuperTypes="#//ChangeMode_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision_revisionDate_AttrEClass" eSuperTypes="#//DateTime_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision_oldVersion_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision_newVersion_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision_authorName_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision_comment_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Version_value_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Version_changeMode_AttrEClass" eSuperTypes="#//ChangeMode_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Element_name_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Element_value_AttrEClass" eSuperTypes="#//String_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericElement_elementFeatureMap_AttrEClass"
+      eSuperTypes="#//EFeatureMapEntry_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericElement_attributeFeatureMap_AttrEClass"
+      eSuperTypes="#//EFeatureMapEntry_AttributeEClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute_containment"
+        upperBound="-1" eType="#//Attribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RefSemantic_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refsemantic_containment"
+        upperBound="-1" eType="#//RefSemantic" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeValueRequirement_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributevaluerequirement_containment"
+        upperBound="-1" eType="#//AttributeValueRequirement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrdinalScaledType_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ordinalscaledtype_containment"
+        upperBound="-1" eType="#//OrdinalScaledType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NominalScaledType_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nominalscaledtype_containment"
+        upperBound="-1" eType="#//NominalScaledType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnknownType_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unknowntype_containment"
+        upperBound="-1" eType="#//UnknownType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Description_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description_containment"
+        upperBound="-1" eType="#//Description" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Version_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="version_containment" upperBound="-1"
+        eType="#//Version" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Revision_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="revision_containment" upperBound="-1"
+        eType="#//Revision" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Copyright_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="copyright_containment"
+        upperBound="-1" eType="#//Copyright" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AdditionalInformation_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalinformation_containment"
+        upperBound="-1" eType="#//AdditionalInformation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceDocumentInformation_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcedocumentinformation_containment"
+        upperBound="-1" eType="#//SourceDocumentInformation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalReferenceType_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalreferencetype_containment"
+        upperBound="-1" eType="#//ExternalReferenceType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InstanceHierarchy_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instancehierarchy_containment"
+        upperBound="-1" eType="#//InstanceHierarchy" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceClassLib_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceclasslib_containment"
+        upperBound="-1" eType="#//InterfaceClassLib" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleClassLib_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleclasslib_containment"
+        upperBound="-1" eType="#//RoleClassLib" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemUnitClassLib_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemunitclasslib_containment"
+        upperBound="-1" eType="#//SystemUnitClassLib" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeLib_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributelib_containment"
+        upperBound="-1" eType="#//AttributeLib" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CAEXFile_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caexfile_containment" upperBound="-1"
+        eType="#//CAEXFile" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceClass_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceclass_containment"
+        upperBound="-1" eType="#//InterfaceClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalElement_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalelement_containment"
+        upperBound="-1" eType="#//InternalElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalInterface_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalinterface_containment"
+        upperBound="-1" eType="#//ExternalInterface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleRequirements_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolerequirements_containment"
+        upperBound="-1" eType="#//RoleRequirements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemUnitClass_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemunitclass_containment"
+        upperBound="-1" eType="#//SystemUnitClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeNameMapping_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributenamemapping_containment"
+        upperBound="-1" eType="#//AttributeNameMapping" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceIDMapping_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceidmapping_containment"
+        upperBound="-1" eType="#//InterfaceIDMapping" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleClass_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleclass_containment"
+        upperBound="-1" eType="#//RoleClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mapping_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapping_containment" upperBound="-1"
+        eType="#//Mapping" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportedRoleClass_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedroleclass_containment"
+        upperBound="-1" eType="#//SupportedRoleClass" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalLink_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internallink_containment"
+        upperBound="-1" eType="#//InternalLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericElement_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genericelement_containment"
+        upperBound="-1" eType="#//GenericElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericAttribute_OrGroup" eSuperTypes="#//OrGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="genericattribute_containment"
+        upperBound="-1" eType="#//GenericAttribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Operator" abstract="true" eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Type" abstract="true" eSuperTypes="#//Type">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_FunctionalType" abstract="true"
+      eSuperTypes="#//Object_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//Object_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_CalculateableParameter" eSuperTypes="#//Object_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_FunctionalParameter" eSuperTypes="#//Object_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_CalculateableElement" abstract="true"
+      eSuperTypes="#//Object_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Object" instanceClassName="java.lang.Object"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Argument" abstract="true" eSuperTypes="#//FunctionalArgument #//Object_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_PrimitiveArgument" eSuperTypes="#//Object_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//Object"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//Object_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//Object_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_BitOperator" abstract="true"
+      eSuperTypes="#//Object_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//Object_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_And_BitOperator" eSuperTypes="#//Object_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Or_BitOperator" eSuperTypes="#//Object_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_FunctionalOperator" abstract="true"
+      eSuperTypes="#//Object_ExpressionOperator #//FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_Operator" abstract="true" eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_Type" abstract="true" eSuperTypes="#//Type #//Object_Type">
+    <eAnnotations source="information">
+      <details key="type" value="Boolean"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_FunctionalType" abstract="true"
+      eSuperTypes="#//Boolean_Type #//FunctionalType #//NegatableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//Boolean_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_CalculateableParameter" eSuperTypes="#//Boolean_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_FunctionalParameter" eSuperTypes="#//Boolean_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_CalculateableElement" abstract="true"
+      eSuperTypes="#//Boolean_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Boolean" instanceClassName="java.lang.Boolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_Argument" abstract="true" eSuperTypes="#//FunctionalArgument #//Boolean_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_PrimitiveArgument" eSuperTypes="#//Boolean_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//Boolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//Boolean_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Boolean"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//Boolean_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="Boolean"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_BitOperator" abstract="true"
+      eSuperTypes="#//Boolean_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Boolean"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//Boolean_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_And_BitOperator" eSuperTypes="#//Boolean_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Boolean"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_Or_BitOperator" eSuperTypes="#//Boolean_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Boolean"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_Original_FunctionalOperator"
+      abstract="true" eSuperTypes="#//Boolean_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Boolean"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="equals_FunctionalOperator" eSuperTypes="#//Object_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equals"/>
+      <details key="literal" value=".equals"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" lowerBound="1" eType="#//Object_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="toString_FunctionalOperator" eSuperTypes="#//Object_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="toString"/>
+      <details key="literal" value=".toString"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_Operator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_Type" abstract="true" eSuperTypes="#//Type #//Object_Type">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_FunctionalType" abstract="true"
+      eSuperTypes="#//CharSequence_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//CharSequence_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_CalculateableParameter"
+      eSuperTypes="#//CharSequence_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_FunctionalParameter" eSuperTypes="#//CharSequence_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_CalculateableElement" abstract="true"
+      eSuperTypes="#//CharSequence_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="CharSequence" instanceClassName="java.lang.CharSequence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_Argument" abstract="true"
+      eSuperTypes="#//FunctionalArgument #//CharSequence_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_PrimitiveArgument" eSuperTypes="#//CharSequence_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//CharSequence"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//CharSequence_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="CharSequence"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//CharSequence_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_BitOperator" abstract="true"
+      eSuperTypes="#//CharSequence_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//CharSequence_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_And_BitOperator" eSuperTypes="#//CharSequence_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_Or_BitOperator" eSuperTypes="#//CharSequence_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_Original_FunctionalOperator"
+      abstract="true" eSuperTypes="#//CharSequence_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_Operator" abstract="true" eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_Type" abstract="true" eSuperTypes="#//Type #//Object_Type">
+    <eAnnotations source="information">
+      <details key="type" value="Integer"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_FunctionalType" abstract="true"
+      eSuperTypes="#//Integer_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//Integer_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_CalculateableParameter" eSuperTypes="#//Integer_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_FunctionalParameter" eSuperTypes="#//Integer_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_Argument" abstract="true" eSuperTypes="#//FunctionalArgument #//Integer_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_PrimitiveArgument" eSuperTypes="#//Integer_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//Integer_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Integer"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//Integer_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="Integer"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_BitOperator" abstract="true"
+      eSuperTypes="#//Integer_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Integer"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//Integer_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_And_BitOperator" eSuperTypes="#//Integer_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Integer"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_Or_BitOperator" eSuperTypes="#//Integer_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Integer"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_Original_FunctionalOperator"
+      abstract="true" eSuperTypes="#//Integer_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Integer"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="length_FunctionalOperator" eSuperTypes="#//CharSequence_Original_FunctionalOperator #//Integer_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="length"/>
+      <details key="literal" value=".length"/>
+      <details key="functionalOperatorType" value="CharSequence"/>
+      <details key="functionalType" value="Integer_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_Operator" abstract="true"
+      eSuperTypes="#//Operator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_Type" abstract="true" eSuperTypes="#//Type #//Object_Type">
+    <eAnnotations source="information">
+      <details key="type" value="Character"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_FunctionalType" abstract="true"
+      eSuperTypes="#//Character_Type #//FunctionalType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//Character_FunctionalOperator"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_CalculateableParameter" eSuperTypes="#//Character_Type #//CalculateableParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_FunctionalParameter" eSuperTypes="#//Character_Type #//FunctionalParameter">
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_Calculateable" abstract="true"
+      eSuperTypes="#//Calculateable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_CalculateableElement" abstract="true"
+      eSuperTypes="#//Character_Calculateable #//CalculateableElement"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Character" instanceClassName="java.lang.Character"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_Argument" abstract="true"
+      eSuperTypes="#//FunctionalArgument #//Character_FunctionalType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_PrimitiveArgument" eSuperTypes="#//Character_Argument #//PrimitiveArgument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="#//Character"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_EvaluationOperation_Argument"
+      abstract="true" eSuperTypes="#//EvaluationOperation_Argument #//Character_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Character"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_ExpressionOperator" abstract="true"
+      eSuperTypes="#//ExpressionOperator #//Character_Operator">
+    <eAnnotations source="information">
+      <details key="type" value="Character"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_BitOperator" abstract="true"
+      eSuperTypes="#//Character_ExpressionOperator #//BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Character"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connects" lowerBound="2"
+        upperBound="-1" eType="#//Character_ExpressionOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_And_BitOperator" eSuperTypes="#//Character_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Character"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_Or_BitOperator" eSuperTypes="#//Character_BitOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Character"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_Original_FunctionalOperator"
+      abstract="true" eSuperTypes="#//Character_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Character"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="charAt_FunctionalOperator" eSuperTypes="#//Character_Original_FunctionalOperator #//Character_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="charAt"/>
+      <details key="literal" value=".charAt"/>
+      <details key="functionalOperatorType" value="Character"/>
+      <details key="functionalType" value="Character_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="i" lowerBound="1" eType="#//Integer_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="contains_FunctionalOperator" eSuperTypes="#//String_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="contains"/>
+      <details key="literal" value=".contains"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="charSequence" lowerBound="1"
+        eType="#//CharSequence_FunctionalParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="substring_FunctionalOperator" eSuperTypes="#//String_Original_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="substring"/>
+      <details key="literal" value=".substring"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startIndex" lowerBound="1"
+        eType="#//Integer_FunctionalParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endIndex" lowerBound="1"
+        eType="#//Integer_FunctionalParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="concat_FunctionalOperator" eSuperTypes="#//String_Original_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="concat"/>
+      <details key="literal" value=".concat"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="str" lowerBound="1" eType="#//String_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="endsWith_FunctionalOperator" eSuperTypes="#//String_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="endsWith"/>
+      <details key="literal" value=".endsWith"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="suffix" lowerBound="1"
+        eType="#//String_FunctionalParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="equalsIgnoreCase_FunctionalOperator"
+      eSuperTypes="#//String_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equalsIgnoreCase"/>
+      <details key="literal" value=".equalsIgnoreCase"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anotherString" lowerBound="1"
+        eType="#//String_FunctionalParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="indexOfString_FunctionalOperator" eSuperTypes="#//String_Original_FunctionalOperator #//Integer_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="indexOfString"/>
+      <details key="literal" value=".indexOf"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="Integer_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="str" lowerBound="1" eType="#//String_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="isEmpty_FunctionalOperator" eSuperTypes="#//String_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="isEmpty"/>
+      <details key="literal" value=".isEmpty"/>
+      <details key="functionalOperatorType" value="String"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="greaterThan_FunctionalOperator" eSuperTypes="#//Integer_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="greaterThan"/>
+      <details key="literal" value=">"/>
+      <details key="functionalOperatorType" value="Integer"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="i" lowerBound="1" eType="#//Integer_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="greaterEquals_FunctionalOperator" eSuperTypes="#//Integer_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="greaterEquals"/>
+      <details key="literal" value=">="/>
+      <details key="functionalOperatorType" value="Integer"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="i" lowerBound="1" eType="#//Integer_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="smallerThan_FunctionalOperator" eSuperTypes="#//Integer_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="smallerThan"/>
+      <details key="literal" value="&lt;"/>
+      <details key="functionalOperatorType" value="Integer"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="i" lowerBound="1" eType="#//Integer_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="smallerEquals_FunctionalOperator" eSuperTypes="#//Integer_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="smallerEquals"/>
+      <details key="literal" value="&lt;="/>
+      <details key="functionalOperatorType" value="Integer"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="i" lowerBound="1" eType="#//Integer_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="parseBoolean_FunctionalOperator" eSuperTypes="#//Boolean_Original_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="parseBoolean"/>
+      <details key="literal" value=".parseBoolean"/>
+      <details key="functionalOperatorType" value="Boolean"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s" lowerBound="1" eType="#//String_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="compareTo_FunctionalOperator" eSuperTypes="#//Boolean_Original_FunctionalOperator #//Integer_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="compareTo"/>
+      <details key="literal" value=".compareTo"/>
+      <details key="functionalOperatorType" value="Boolean"/>
+      <details key="functionalType" value="Integer_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" lowerBound="1" eType="#//Boolean_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Integer_equals_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_Integer_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equals"/>
+      <details key="literal" value=".equals"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" lowerBound="1" eType="#//Object_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Integer_toString_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_Integer_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="toString"/>
+      <details key="literal" value=".toString"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer_FunctionalOperator" abstract="true"
+      eSuperTypes="#//Operator #//ExpressionOperator #//Integer_Operator #//Integer_ExpressionOperator #//TypedElement #//FunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InheritedFrom_Object_to_Integer_FunctionalOperator"
+      abstract="true" eSuperTypes="#//Integer_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_CharSequence_equals_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_CharSequence_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equals"/>
+      <details key="literal" value=".equals"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" lowerBound="1" eType="#//Object_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_CharSequence_toString_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_CharSequence_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="toString"/>
+      <details key="literal" value=".toString"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_FunctionalOperator" abstract="true"
+      eSuperTypes="#//Operator #//ExpressionOperator #//CharSequence_Operator #//CharSequence_ExpressionOperator #//TypedElement #//FunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InheritedFrom_Object_to_CharSequence_FunctionalOperator"
+      abstract="true" eSuperTypes="#//CharSequence_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Character_equals_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_Character_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equals"/>
+      <details key="literal" value=".equals"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" lowerBound="1" eType="#//Object_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Character_toString_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_Character_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="toString"/>
+      <details key="literal" value=".toString"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Character_FunctionalOperator" abstract="true"
+      eSuperTypes="#//Operator #//ExpressionOperator #//Character_Operator #//Character_ExpressionOperator #//TypedElement #//FunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InheritedFrom_Object_to_Character_FunctionalOperator"
+      abstract="true" eSuperTypes="#//Character_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Boolean_equals_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_Boolean_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equals"/>
+      <details key="literal" value=".equals"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" lowerBound="1" eType="#//Object_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Object_Boolean_toString_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_Object_to_Boolean_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="toString"/>
+      <details key="literal" value=".toString"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean_FunctionalOperator" abstract="true"
+      eSuperTypes="#//Operator #//ExpressionOperator #//Boolean_Operator #//Boolean_ExpressionOperator #//TypedElement #//FunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InheritedFrom_Object_to_Boolean_FunctionalOperator"
+      abstract="true" eSuperTypes="#//Boolean_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="Object"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_String_length_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_CharSequence_to_String_FunctionalOperator #//Integer_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="length"/>
+      <details key="literal" value=".length"/>
+      <details key="functionalOperatorType" value="CharSequence"/>
+      <details key="functionalType" value="Integer_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_String_Object_CharSequence_equals_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_CharSequence_to_String_FunctionalOperator #//Boolean_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="equals"/>
+      <details key="literal" value=".equals"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="Boolean_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obj" lowerBound="1" eType="#//Object_FunctionalParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CharSequence_String_Object_CharSequence_toString_FunctionalOperator"
+      eSuperTypes="#//InheritedFrom_CharSequence_to_String_FunctionalOperator #//String_FunctionalType">
+    <eAnnotations source="information">
+      <details key="name" value="toString"/>
+      <details key="literal" value=".toString"/>
+      <details key="functionalOperatorType" value="Object"/>
+      <details key="functionalType" value="String_FunctionalType"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="String_FunctionalOperator" abstract="true"
+      eSuperTypes="#//Operator #//ExpressionOperator #//String_Operator #//String_ExpressionOperator #//TypedElement #//FunctionalOperator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InheritedFrom_CharSequence_to_String_FunctionalOperator"
+      abstract="true" eSuperTypes="#//String_FunctionalOperator">
+    <eAnnotations source="information">
+      <details key="type" value="CharSequence"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Count_AggregationOperator" eSuperTypes="#//CountingAggregationOperator #//Integer_EvaluationOperation_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Integer"/>
+      <details key="literal" value="count"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sum_AggregationOperator" eSuperTypes="#//CalculatingAggregationOperator #//Integer_EvaluationOperation_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Integer"/>
+      <details key="literal" value="sum"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculateable" lowerBound="1"
+        eType="#//Integer_CalculateableParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Min_AggregationOperator" eSuperTypes="#//CalculatingAggregationOperator #//Integer_EvaluationOperation_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Integer"/>
+      <details key="literal" value="min"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculateable" lowerBound="1"
+        eType="#//Integer_CalculateableParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Max_AggregationOperator" eSuperTypes="#//CalculatingAggregationOperator #//Integer_EvaluationOperation_Argument">
+    <eAnnotations source="information">
+      <details key="functionalType" value="Integer"/>
+      <details key="literal" value="max"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculateable" lowerBound="1"
+        eType="#//Integer_CalculateableParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerParseInt_ClassOperator" eSuperTypes="#//ClassOperator #//Integer_EvaluationOperation_Argument">
+    <eAnnotations source="information">
+      <details key="functonalType" value="Integer"/>
+      <details key="literal" value="Integer.parseInt"/>
+    </eAnnotations>
+    <eOperations name="getLiteral" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getAllParameters" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
+    <eOperations name="validate" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diagnostic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain"/>
+      <eParameters name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculateable" lowerBound="1"
+        eType="#//String_FunctionalParameter" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

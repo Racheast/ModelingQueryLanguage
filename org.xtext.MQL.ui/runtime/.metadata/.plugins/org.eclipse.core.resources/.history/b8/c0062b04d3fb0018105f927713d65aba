@@ -1,0 +1,43 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InstanceHierarchy1473774934(result);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern InstanceHierarchy1473774934(elem:InstanceHierarchy){
+    InstanceHierarchy(elem);
+    find ie1_OrGroup_ref(elem,ie1);
+    find count493516793(elem, ref493516793);
+    check(((ref493516793)>=(4)));
+}
+
+pattern count493516793(elem:InstanceHierarchy, result:java Integer){
+    result == count find ie1_OrGroup_ref(elem, ie1);
+}
+
+pattern SystemUnitClass_internalElement2053200208(from:SystemUnitClass, to:InternalElement){
+    SystemUnitClass.internalElement(from, to);
+}
+
+pattern SystemUnitClass_systemUnitClass976917427(from:SystemUnitClass, to:SystemUnitClass){
+    SystemUnitClass.systemUnitClass(from, to);
+}
+
+pattern InstanceHierarchy_internalElement1638096723(from:InstanceHierarchy, to:InternalElement){
+    InstanceHierarchy.internalElement(from, to);
+}
+
+pattern InternalElement_attribute2121893665(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern ie1_OrGroup_ref(container:InstanceHierarchy, member:InternalElement){
+    find ie1_OrGroup(member);
+    find InstanceHierarchy_internalElement1638096723+(container,member);
+}
+
