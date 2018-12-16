@@ -1,5 +1,0 @@
-Find SystemUnitClass{
-	name n1;
-}OR SystemUnitClass{
-	name n2!;
-}

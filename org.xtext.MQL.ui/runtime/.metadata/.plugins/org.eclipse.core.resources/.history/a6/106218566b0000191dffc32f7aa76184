@@ -1,6 +1,0 @@
-Find SystemUnitClass{
-	name n1;
-	eval: count(n1).equals(0);
-}OR SystemUnitClass{
-	name n2!;
-}

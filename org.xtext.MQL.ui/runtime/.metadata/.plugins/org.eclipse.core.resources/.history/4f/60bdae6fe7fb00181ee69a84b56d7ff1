@@ -1,4 +1,0 @@
-Find SystemUnitClass{
-	name n1;
-	eval: sum(StringRef(n1).length()).greaterThan(10);
-}

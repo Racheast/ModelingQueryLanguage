@@ -1,4 +1,0 @@
-Find SystemUnitClass{
-	internalElement ie+;
-	eval: count(ie).greaterThan(3);
-}

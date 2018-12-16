@@ -1,4 +1,0 @@
-Find InternalElement{
-	name n1 : self.contains("R1");
-	eval: count(n1).greaterEquals(1);
-}

@@ -1,3 +1,0 @@
-Find InternalElement{
-	name n1 : self.contains("R1");
-}

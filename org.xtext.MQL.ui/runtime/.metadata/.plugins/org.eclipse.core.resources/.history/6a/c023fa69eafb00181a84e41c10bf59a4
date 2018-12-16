@@ -1,4 +1,0 @@
-Find InstanceHierarchy{
-	internalElement ie1+;  //should throw an error 
-	eval:count(ie1).greaterEquals(4);
-}
