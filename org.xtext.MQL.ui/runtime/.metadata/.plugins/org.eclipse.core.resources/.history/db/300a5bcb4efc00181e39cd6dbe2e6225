@@ -1,0 +1,8 @@
+Find InternalElement{
+	iD id0;
+	attribute a1 : Attribute{
+		iD id1;
+		value v1;
+		eval: Integer.parseInt(StringRef(v1)).greaterThan(Integer.parseInt(StringRef(id1)));
+	}
+}

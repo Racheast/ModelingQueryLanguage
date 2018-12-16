@@ -1,0 +1,74 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1329644385(result);
+}
+
+pattern ie2_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+    find InternalElement1059666649(elem);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern InternalElement1059666649(elem:InternalElement){
+    InternalElement(elem);
+    find x2_CAEXObject_name_AttrEClass(elem,x2);
+    find ie2_OrGroup_ref(elem,ie2);
+    ie2 != x2;
+}
+
+pattern InternalElement1329644385(elem:InternalElement){
+    InternalElement(elem);
+    find n4_CAEXObject_name_AttrEClass(elem,n4);
+    find a1_OrGroup_ref(elem,a1);
+    find ie1_OrGroup_ref(elem,ie1);
+    ie1 != a1;
+    n4 != a1;
+    n4 != ie1;
+    find count1270525946(elem, ref1270525946);
+    check(((ref1270525946)>=(0)));
+}
+
+pattern n4_CAEXObject_name_AttrEClass(elem:InternalElement,n4){
+	InternalElement.name(elem,n4);
+	check(((n4).contains("R1")));
+}
+
+pattern x2_CAEXObject_name_AttrEClass(elem:InternalElement,x2){
+	InternalElement.name(elem,x2);
+}
+
+pattern count1270525946(elem:InternalElement, result:java Integer){
+    result == count find n4_CAEXObject_name_AttrEClass(elem, n4);
+}
+
+pattern InternalElement_attribute1111662823(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern InternalElement_internalElement615829225(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern ie2_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie2_OrGroup(member);
+    find InternalElement_internalElement615829225(container,member);
+}
+
+pattern ie1_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie1_OrGroup(member);
+    find InternalElement_internalElement615829225(container,member);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute1111662823(container,member);
+}
+

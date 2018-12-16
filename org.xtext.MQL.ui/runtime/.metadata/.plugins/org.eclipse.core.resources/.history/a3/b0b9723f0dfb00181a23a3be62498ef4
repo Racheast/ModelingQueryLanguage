@@ -1,0 +1,55 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement1472387094(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern InternalElement1472387094(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find n3_CAEXObject_name_AttrEClass(elem,n3);
+    find a1_OrGroup_ref(elem,a1);
+    find ie1_OrGroup_ref(elem,ie1);
+    a1 != ie1;
+    n1 != ie1;
+    n3 != ie1;
+    a1 != n3;
+    n1 != n3;
+    n1 != a1;
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+}
+
+pattern n3_CAEXObject_name_AttrEClass(elem:InternalElement,n3){
+	InternalElement.name(elem,n3);
+}
+
+pattern InternalElement_internalElement2078292914(from:InternalElement, to:InternalElement){
+    InternalElement.internalElement(from, to);
+}
+
+pattern InternalElement_attribute2004903925(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute2004903925(container,member);
+}
+
+pattern ie1_OrGroup_ref(container:InternalElement, member:InternalElement){
+    find ie1_OrGroup(member);
+    find InternalElement_internalElement2078292914(container,member);
+}
+

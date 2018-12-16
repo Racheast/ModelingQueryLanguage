@@ -1,0 +1,67 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement935807839(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+    find Attribute1763138742(elem);
+}
+
+pattern Attribute1763138742(elem:Attribute){
+    Attribute(elem);
+    find id1_CAEXObject_iD_AttrEClass(elem,id1);
+    find v1_Attribute_value_AttrEClass(elem,v1);
+    v1 != id1;
+    find Integer_parseInt1686597496(elem, ref1686597496);
+    find Integer_parseInt1438341192(elem, ref1438341192);
+    check(((ref1686597496)>(ref1438341192)));
+}
+
+pattern InternalElement935807839(elem:InternalElement){
+    InternalElement(elem);
+    find id0_CAEXObject_iD_AttrEClass(elem,id0);
+    find a1_OrGroup_ref(elem,a1);
+    a1 != id0;
+}
+
+pattern id0_CAEXObject_iD_AttrEClass(elem:InternalElement,id0){
+	InternalElement.iD(elem,id0);
+}
+
+pattern id1_CAEXObject_iD_AttrEClass(elem:Attribute,id1){
+	Attribute.iD(elem,id1);
+}
+
+pattern v1_Attribute_value_AttrEClass(elem:Attribute,v1){
+	Attribute.value(elem,v1);
+}
+
+pattern Integer_parseInt1438341192(elem:Attribute, result:java Integer){
+    Attribute(elem);    find argument_1894525330(elem, ref1894525330);
+	result == eval(Integer.parseInt(ref1894525330));
+}
+
+pattern Integer_parseInt1686597496(elem:Attribute, result:java Integer){
+    Attribute(elem);    find argument_736276546(elem, ref736276546);
+	result == eval(Integer.parseInt(ref736276546));
+}
+
+pattern argument_736276546(elem:Attribute, result: java String){
+    find v1_Attribute_value_AttrEClass(elem, result);
+}
+
+pattern argument_1894525330(elem:Attribute, result: java String){
+    find id1_CAEXObject_iD_AttrEClass(elem, result);
+}
+
+pattern InternalElement_attribute938367183(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute938367183(container,member);
+}
+

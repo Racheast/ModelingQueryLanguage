@@ -1,0 +1,25 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InstanceHierarchy967473246(result);
+}
+
+pattern ie1_OrGroup(elem:InternalElement){
+	InternalElement(elem);
+}
+
+pattern InstanceHierarchy967473246(elem:InstanceHierarchy){
+    InstanceHierarchy(elem);
+    find ie1_OrGroup_ref(elem,ie1);
+}
+
+pattern InstanceHierarchy_internalElement798235044(from:InstanceHierarchy, to:InternalElement){
+    InstanceHierarchy.internalElement(from, to);
+}
+
+pattern ie1_OrGroup_ref(container:InstanceHierarchy, member:InternalElement){
+    find ie1_OrGroup(member);
+    find InstanceHierarchy_internalElement798235044(container,member);
+}
+

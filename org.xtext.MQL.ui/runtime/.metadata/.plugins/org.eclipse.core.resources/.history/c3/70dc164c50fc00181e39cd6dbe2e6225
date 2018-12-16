@@ -1,0 +1,60 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find SystemUnitClass1462194510(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+    find Attribute1738876078(elem);
+}
+
+pattern SystemUnitClass1462194510(elem:SystemUnitClass){
+    SystemUnitClass(elem);
+    find a1_OrGroup_ref(elem,a1);
+    find count1066957014(elem, ref1066957014);
+    check(((ref1066957014)>(0)));
+}
+
+pattern Attribute1738876078(elem:Attribute){
+    Attribute(elem);
+    find id1_CAEXObject_iD_AttrEClass(elem,id1);
+    find Integer_parseInt557904041(elem, ref557904041);
+    find Integer_parseInt1860332505(elem, ref1860332505);
+    check(((ref557904041)>(ref1860332505)));
+}
+
+pattern id1_CAEXObject_iD_AttrEClass(elem:Attribute,id1){
+	Attribute.iD(elem,id1);
+}
+
+pattern Integer_parseInt557904041(elem:Attribute, result:java Integer){
+    Attribute(elem);    find argument_2062980773(elem, ref2062980773);
+	result == eval(Integer.parseInt(ref2062980773));
+}
+
+pattern Integer_parseInt1860332505(elem:Attribute, result:java Integer){
+    Attribute(elem);	result == eval(Integer.parseInt("99"));
+}
+
+pattern count1066957014(elem:SystemUnitClass, result:java Integer){
+    result == count find a1_OrGroup_ref(elem, a1);
+}
+
+pattern argument_2062980773(elem:Attribute, result: java String){
+    find id1_CAEXObject_iD_AttrEClass(elem, result);
+}
+
+pattern InternalElement_attribute938367183(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern SystemUnitClass_attribute938367183(from:SystemUnitClass, to:Attribute){
+    SystemUnitClass.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:SystemUnitClass, member:Attribute){
+    find a1_OrGroup(member);
+    find SystemUnitClass_attribute938367183(container,member);
+}
+

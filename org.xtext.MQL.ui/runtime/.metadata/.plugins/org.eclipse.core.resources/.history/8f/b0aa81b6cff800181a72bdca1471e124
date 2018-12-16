@@ -1,0 +1,8 @@
+Find InternalElement{
+	name n1 : self.length().greaterThan(3)
+	internalElement ie1+
+	eval:And(count(ie1).greaterEquals(2),count(ie1).greaterEquals(2))
+}OR InternalElement{
+	name n2 : self.length().greaterThan(3)	
+	internalElement ie2!
+}

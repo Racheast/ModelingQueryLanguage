@@ -1,0 +1,16 @@
+package qrmm
+import "/ModelingQueryLanguage/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Attribute117588277(result);
+}
+
+pattern Attribute117588277(elem:Attribute){
+    Attribute(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:Attribute,n1){
+	Attribute.name(elem,n1);
+}
+

@@ -1,0 +1,11 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find Version1383476320(result);
+}
+
+pattern Version1383476320(elem:Version){
+    Version(elem);
+}
+

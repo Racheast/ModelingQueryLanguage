@@ -1,0 +1,45 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement54243264(result);
+}
+
+pattern a1_OrGroup(elem:Attribute){
+	Attribute(elem);
+}
+
+pattern InternalElement54243264(elem:InternalElement){
+    InternalElement(elem);
+    find i1_CAEXObject_iD_AttrEClass(elem,i1);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+    find a1_OrGroup_ref(elem,a1);
+    i1 != n1;
+    a1 != n1;
+    a1 != i1;
+    find count469528036(elem, ref469528036);
+    check(((ref469528036)>=(0)));
+}
+
+pattern i1_CAEXObject_iD_AttrEClass(elem:InternalElement,i1){
+	InternalElement.iD(elem,i1);
+	check(((((i1).length()))>(0)));
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	InternalElement.name(elem,n1);
+}
+
+pattern count469528036(elem:InternalElement, result:java Integer){
+    result == count find n1_CAEXObject_name_AttrEClass(elem, n1);
+}
+
+pattern InternalElement_attribute2053734612(from:InternalElement, to:Attribute){
+    InternalElement.attribute(from, to);
+}
+
+pattern a1_OrGroup_ref(container:InternalElement, member:Attribute){
+    find a1_OrGroup(member);
+    find InternalElement_attribute2053734612(container,member);
+}
+

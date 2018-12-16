@@ -1,0 +1,4 @@
+Find InternalElement{
+	iD i1;
+	name n1 : self.contains(Integer.parseInt(i1).toString());//self.contains(Integer.parseInt("1").toString());
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated QRMM -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="qrmm.presentation.QrmmModelWizardID"
+            name="%_UI_QrmmModelWizard_label"
+            class="qrmm.presentation.QrmmModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QrmmModelFile.gif">
+         <description>%_UI_QrmmModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated QRMM -->
+      <editor
+            id="qrmm.presentation.QrmmEditorID"
+            name="%_UI_QrmmEditor_label"
+            icon="icons/full/obj16/QrmmModelFile.gif"
+            extensions="qrmm"
+            class="qrmm.presentation.QrmmEditor"
+            contributorClass="qrmm.presentation.QrmmActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/QMM/src" modelPluginID="QMM" modelName="QMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>../../MQLSetup/model/QMM.ecore</foreignModel>
+  <genPackages prefix="Qmm" resource="XML" disposableProviderFactory="true" loadInitialization="true"
+      literalsInterface="false" ecorePackage="QMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="QMM.ecore#//ChangeMode">
+      <genEnumLiterals ecoreEnumLiteral="QMM.ecore#//ChangeMode/state"/>
+      <genEnumLiterals ecoreEnumLiteral="QMM.ecore#//ChangeMode/create"/>
+      <genEnumLiterals ecoreEnumLiteral="QMM.ecore#//ChangeMode/delete"/>
+      <genEnumLiterals ecoreEnumLiteral="QMM.ecore#//ChangeMode/change"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="QMM.ecore#//AttributeDataType"/>
+    <genDataTypes ecoreDataType="QMM.ecore#//ChangeModeObject"/>
+    <genDataTypes ecoreDataType="QMM.ecore#//Object"/>
+    <genDataTypes ecoreDataType="QMM.ecore#//Boolean"/>
+    <genDataTypes ecoreDataType="QMM.ecore#//CharSequence"/>
+    <genDataTypes ecoreDataType="QMM.ecore#//Integer"/>
+    <genDataTypes ecoreDataType="QMM.ecore#//Character"/>
+    <genClasses ecoreClass="QMM.ecore#//AttributeFamily">
+      <genOperations ecoreOperation="QMM.ecore#//AttributeFamily/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeFamily/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeFamily/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeNameMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeNameMapping/roleAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeNameMapping/systemUnitAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeNameMapping/roleAttributeName_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeNameMapping/systemUnitAttributeName_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//AttributeNameMapping/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeNameMapping/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeNameMapping/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/refSemantic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/defaultValue_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/value_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/attributeDataType_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/refAttributeType_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute/unit_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//Attribute/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Attribute/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Attribute/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeLib/attributeType"/>
+      <genOperations ecoreOperation="QMM.ecore#//AttributeLib/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeLib/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeLib/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeValueRequirement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeValueRequirement/ordinalScaledType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeValueRequirement/nominalScaledType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeValueRequirement/unknownType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeValueRequirement/name_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//AttributeValueRequirement/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeValueRequirement/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeValueRequirement/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CAEXBasicObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXBasicObject/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXBasicObject/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXBasicObject/revision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXBasicObject/copyright"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXBasicObject/additionalInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXBasicObject/changeMode_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//CAEXBasicObject/validate">
+        <genParameters ecoreParameter="QMM.ecore#//CAEXBasicObject/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//CAEXBasicObject/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CAEXFile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/sourceDocumentInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/externalReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/instanceHierarchy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/interfaceClassLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/roleClassLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/systemUnitClassLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/attributeTypeLib"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/superiorStandardVersion_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/fileName_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile/schemaVersion_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//CAEXFile/validate">
+        <genParameters ecoreParameter="QMM.ecore#//CAEXFile/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//CAEXFile/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CAEXObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXObject/iD_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXObject/name_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//CAEXObject/validate">
+        <genParameters ecoreParameter="QMM.ecore#//CAEXObject/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//CAEXObject/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DocumentRoot/cAEXFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DocumentRoot/mixed_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//DocumentRoot/validate">
+        <genParameters ecoreParameter="QMM.ecore#//DocumentRoot/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//DocumentRoot/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//ExternalInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ExternalInterface/externalInterface"/>
+      <genOperations ecoreOperation="QMM.ecore#//ExternalInterface/validate">
+        <genParameters ecoreParameter="QMM.ecore#//ExternalInterface/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//ExternalInterface/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//ExternalReferenceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ExternalReferenceType/alias_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ExternalReferenceType/path_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//ExternalReferenceType/validate">
+        <genParameters ecoreParameter="QMM.ecore#//ExternalReferenceType/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//ExternalReferenceType/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InstanceHierarchy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InstanceHierarchy/internalElement"/>
+      <genOperations ecoreOperation="QMM.ecore#//InstanceHierarchy/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InstanceHierarchy/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InstanceHierarchy/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceClassLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClassLib/interfaceClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//InterfaceClassLib/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceClassLib/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceClassLib/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClass/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClass/baseClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClass/interfaceClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClass/refBaseClassPath_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//InterfaceClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceFamily">
+      <genOperations ecoreOperation="QMM.ecore#//InterfaceFamily/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceFamily/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceFamily/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceIDMapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceIDMapping/roleInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceIDMapping/systemUnitInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceIDMapping/roleInterfaceID_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceIDMapping/systemUnitInterfaceID_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//InterfaceIDMapping/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceIDMapping/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InterfaceIDMapping/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InternalElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalElement/roleRequirements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalElement/baseSystemUnit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalElement/refBaseSystemUnitPath_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//InternalElement/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InternalElement/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InternalElement/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InternalLink">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalLink/partnerSideA"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalLink/partnerSideB"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalLink/refPartnerSideA_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalLink/refPartnerSideB_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//InternalLink/validate">
+        <genParameters ecoreParameter="QMM.ecore#//InternalLink/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//InternalLink/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Mapping">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Mapping/attributeNameMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Mapping/interfaceIDMapping"/>
+      <genOperations ecoreOperation="QMM.ecore#//Mapping/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Mapping/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Mapping/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//NominalScaledType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//NominalScaledType/requiredValue_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//NominalScaledType/validate">
+        <genParameters ecoreParameter="QMM.ecore#//NominalScaledType/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//NominalScaledType/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//OrdinalScaledType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//OrdinalScaledType/requiredMaxValue_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//OrdinalScaledType/requiredValue_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//OrdinalScaledType/requiredMinValue_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//OrdinalScaledType/validate">
+        <genParameters ecoreParameter="QMM.ecore#//OrdinalScaledType/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//OrdinalScaledType/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RefSemantic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RefSemantic/correspondingAttributePath_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//RefSemantic/validate">
+        <genParameters ecoreParameter="QMM.ecore#//RefSemantic/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//RefSemantic/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleClassLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClassLib/roleClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//RoleClassLib/validate">
+        <genParameters ecoreParameter="QMM.ecore#//RoleClassLib/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//RoleClassLib/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClass/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClass/externalInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClass/baseClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClass/roleClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClass/refBaseClassPath_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//RoleClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//RoleClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//RoleClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleFamily">
+      <genOperations ecoreOperation="QMM.ecore#//RoleFamily/validate">
+        <genParameters ecoreParameter="QMM.ecore#//RoleFamily/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//RoleFamily/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleRequirements/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleRequirements/externalInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleRequirements/mappingObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleRequirements/roleClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//RoleRequirements/validate">
+        <genParameters ecoreParameter="QMM.ecore#//RoleRequirements/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//RoleRequirements/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/lastWritingDateTime_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originID_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originName_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originProjectID_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originProjectTitle_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originRelease_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originVendor_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originVendorURL_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation/originVersion_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//SourceDocumentInformation/validate">
+        <genParameters ecoreParameter="QMM.ecore#//SourceDocumentInformation/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//SourceDocumentInformation/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SupportedRoleClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SupportedRoleClass/mappingObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SupportedRoleClass/roleClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SupportedRoleClass/refRoleClassPath_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//SupportedRoleClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//SupportedRoleClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//SupportedRoleClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SystemUnitClassLib">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClassLib/systemUnitClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//SystemUnitClassLib/validate">
+        <genParameters ecoreParameter="QMM.ecore#//SystemUnitClassLib/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//SystemUnitClassLib/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SystemUnitClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/externalInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/internalElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/supportedRoleClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/internalLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/baseClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/systemUnitClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass/refBaseClassPath_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//SystemUnitClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//SystemUnitClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//SystemUnitClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SystemUnitFamily">
+      <genOperations ecoreOperation="QMM.ecore#//SystemUnitFamily/validate">
+        <genParameters ecoreParameter="QMM.ecore#//SystemUnitFamily/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//SystemUnitFamily/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//UnknownType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//UnknownType/requirements_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//UnknownType/validate">
+        <genParameters ecoreParameter="QMM.ecore#//UnknownType/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//UnknownType/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Copyright">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Copyright/value_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Copyright/changeMode_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//Copyright/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Copyright/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Copyright/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Description">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Description/value_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Description/changeMode_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//Description/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Description/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Description/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Revision">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Revision/revisionDate_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Revision/oldVersion_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Revision/newVersion_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Revision/authorName_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Revision/comment_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//Revision/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Revision/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Revision/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Version">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Version/value_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Version/changeMode_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//Version/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Version/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Version/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AdditionalInformation">
+      <genOperations ecoreOperation="QMM.ecore#//AdditionalInformation/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AdditionalInformation/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AdditionalInformation/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Element">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Element/name_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Element/value_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//Element/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Element/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Element/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//GenericElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//GenericElement/nestedElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//GenericElement/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//GenericElement/elementFeatureMap_AttrEClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//GenericElement/attributeFeatureMap_AttrEClass"/>
+      <genOperations ecoreOperation="QMM.ecore#//GenericElement/validate">
+        <genParameters ecoreParameter="QMM.ecore#//GenericElement/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//GenericElement/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//GenericAttribute">
+      <genOperations ecoreOperation="QMM.ecore#//GenericAttribute/validate">
+        <genParameters ecoreParameter="QMM.ecore#//GenericAttribute/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//GenericAttribute/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Countable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//NegatableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//NegatableElement/negated"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//OrGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//OrGroup/transitive"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//TypedElement">
+      <genOperations ecoreOperation="QMM.ecore#//TypedElement/getType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//RootClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RootClass/EvaluationOperator"/>
+      <genOperations ecoreOperation="QMM.ecore#//RootClass/validateCheckExpression">
+        <genParameters ecoreParameter="QMM.ecore#//RootClass/validateCheckExpression/o"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Query"/>
+    <genClasses ecoreClass="QMM.ecore#//FindQuery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//FindQuery/where"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeEClass"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//RegularAttributeEClass">
+      <genOperations ecoreOperation="QMM.ecore#//RegularAttributeEClass/validateCheckExpression">
+        <genParameters ecoreParameter="QMM.ecore#//RegularAttributeEClass/validateCheckExpression/o"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EnumerationAttributeEClass"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//FunctionalType"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ReferenceArgument"/>
+    <genClasses ecoreClass="QMM.ecore#//Countable_ReferenceArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QMM.ecore#//Countable_ReferenceArgument/reference"/>
+      <genOperations ecoreOperation="QMM.ecore#//Countable_ReferenceArgument/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Countable_ReferenceArgument/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Countable_ReferenceArgument/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Calculateable_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CalculateableElement_ReferenceArgument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//FunctionalArgument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EvaluationOperation_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//PrimitiveArgument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Parameter"/>
+    <genClasses ecoreClass="QMM.ecore#//CountableReferenceParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CountableReferenceParameter/argument"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CalculateableParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CalculateableParameter/argument"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//FunctionalParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//FunctionalParameter/argument"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EnumerationOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//BitOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//FunctionalOperator/getLastOperator"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ClassOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EvaluationOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EvaluationFunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AggregationOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EvaluationBitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//EvaluationBitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//And_EvaluationBitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//And_EvaluationBitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Or_EvaluationBitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Or_EvaluationBitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CountingAggregationOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CountingAggregationOperator/countable"/>
+      <genOperations ecoreOperation="QMM.ecore#//CountingAggregationOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CalculatingAggregationOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_AttributeEClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//String_AttributeEClass/operator"/>
+      <genOperations ecoreOperation="QMM.ecore#//String_AttributeEClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//String_AttributeEClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//String_AttributeEClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//String_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//String_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//String_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//String_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//String_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//String_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//String_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//String_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//String_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//String_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//String_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_EvaluationOperation_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//String_CalculateableElementReferenceArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QMM.ecore#//String_CalculateableElementReferenceArgument/reference"/>
+      <genOperations ecoreOperation="QMM.ecore#//String_CalculateableElementReferenceArgument/validate">
+        <genParameters ecoreParameter="QMM.ecore#//String_CalculateableElementReferenceArgument/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//String_CalculateableElementReferenceArgument/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//String_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//String_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//String_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//String_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//String_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_Original_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//AttributeNameMapping_roleAttributeName_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//AttributeNameMapping_systemUnitAttributeName_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Attribute_defaultValue_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Attribute_value_AttrEClass"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_AttributeEClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeDataType_AttributeEClass/operator"/>
+      <genOperations ecoreOperation="QMM.ecore#//AttributeDataType_AttributeEClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_AttributeEClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_AttributeEClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeDataType_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeDataType_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//AttributeDataType_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeDataType_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//AttributeDataType_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//AttributeDataType_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//AttributeDataType_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_EvaluationOperation_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//AttributeDataType_CalculateableElementReferenceArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeDataType_CalculateableElementReferenceArgument/reference"/>
+      <genOperations ecoreOperation="QMM.ecore#//AttributeDataType_CalculateableElementReferenceArgument/validate">
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_CalculateableElementReferenceArgument/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//AttributeDataType_CalculateableElementReferenceArgument/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeDataType_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeDataType_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//AttributeDataType_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeDataType_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//AttributeDataType_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//AttributeDataType_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//Attribute_attributeDataType_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Attribute_refAttributeType_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Attribute_unit_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//AttributeValueRequirement_name_AttrEClass"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ChangeMode_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ChangeMode_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ChangeMode_Operator"/>
+    <genClasses ecoreClass="QMM.ecore#//ChangeMode_EnumerationOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//ChangeMode_EnumerationOperator/argument"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ChangeMode_EnumerationOperator/or"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//ChangeMode_AttributeEClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ChangeMode_AttributeEClass/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CAEXBasicObject_changeMode_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//CAEXFile_superiorStandardVersion_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//CAEXFile_fileName_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//CAEXFile_schemaVersion_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//CAEXObject_iD_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//CAEXObject_name_AttrEClass"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_AttributeEClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//EFeatureMapEntry_AttributeEClass/operator"/>
+      <genOperations ecoreOperation="QMM.ecore#//EFeatureMapEntry_AttributeEClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_AttributeEClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_AttributeEClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//EFeatureMapEntry_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//EFeatureMapEntry_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//EFeatureMapEntry_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//EFeatureMapEntry_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//EFeatureMapEntry_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//EFeatureMapEntry_PrimitiveArgument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute QMM.ecore#//EFeatureMapEntry_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_EvaluationOperation_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//EFeatureMapEntry_CalculateableElementReferenceArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QMM.ecore#//EFeatureMapEntry_CalculateableElementReferenceArgument/reference"/>
+      <genOperations ecoreOperation="QMM.ecore#//EFeatureMapEntry_CalculateableElementReferenceArgument/validate">
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_CalculateableElementReferenceArgument/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//EFeatureMapEntry_CalculateableElementReferenceArgument/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//EFeatureMapEntry_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//EFeatureMapEntry_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//EFeatureMapEntry_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//EFeatureMapEntry_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//EFeatureMapEntry_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//EFeatureMapEntry_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//DocumentRoot_mixed_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//ExternalReferenceType_alias_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//ExternalReferenceType_path_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceClass_refBaseClassPath_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceIDMapping_roleInterfaceID_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceIDMapping_systemUnitInterfaceID_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//InternalElement_refBaseSystemUnitPath_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//InternalLink_refPartnerSideA_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//InternalLink_refPartnerSideB_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//NominalScaledType_requiredValue_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//OrdinalScaledType_requiredMaxValue_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//OrdinalScaledType_requiredValue_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//OrdinalScaledType_requiredMinValue_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//RefSemantic_correspondingAttributePath_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//RoleClass_refBaseClassPath_AttrEClass"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_AttributeEClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DateTime_AttributeEClass/operator"/>
+      <genOperations ecoreOperation="QMM.ecore#//DateTime_AttributeEClass/validate">
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_AttributeEClass/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_AttributeEClass/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DateTime_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//DateTime_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//DateTime_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//DateTime_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//DateTime_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//DateTime_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//DateTime_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_EvaluationOperation_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//DateTime_CalculateableElementReferenceArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QMM.ecore#//DateTime_CalculateableElementReferenceArgument/reference"/>
+      <genOperations ecoreOperation="QMM.ecore#//DateTime_CalculateableElementReferenceArgument/validate">
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_CalculateableElementReferenceArgument/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//DateTime_CalculateableElementReferenceArgument/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//DateTime_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//DateTime_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//DateTime_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//DateTime_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//DateTime_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//DateTime_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_lastWritingDateTime_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originID_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originName_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originProjectID_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originProjectTitle_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originRelease_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originVendor_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originVendorURL_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_originVersion_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SupportedRoleClass_refRoleClassPath_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//SystemUnitClass_refBaseClassPath_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//UnknownType_requirements_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Copyright_value_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Copyright_changeMode_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Description_value_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Description_changeMode_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Revision_revisionDate_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Revision_oldVersion_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Revision_newVersion_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Revision_authorName_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Revision_comment_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Version_value_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Version_changeMode_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Element_name_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Element_value_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//GenericElement_elementFeatureMap_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//GenericElement_attributeFeatureMap_AttrEClass"/>
+    <genClasses ecoreClass="QMM.ecore#//Attribute_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Attribute_OrGroup/attribute_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RefSemantic_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RefSemantic_OrGroup/refsemantic_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeValueRequirement_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeValueRequirement_OrGroup/attributevaluerequirement_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//OrdinalScaledType_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//OrdinalScaledType_OrGroup/ordinalscaledtype_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//NominalScaledType_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//NominalScaledType_OrGroup/nominalscaledtype_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//UnknownType_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//UnknownType_OrGroup/unknowntype_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Description_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Description_OrGroup/description_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Version_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Version_OrGroup/version_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Revision_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Revision_OrGroup/revision_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Copyright_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Copyright_OrGroup/copyright_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AdditionalInformation_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AdditionalInformation_OrGroup/additionalinformation_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SourceDocumentInformation_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SourceDocumentInformation_OrGroup/sourcedocumentinformation_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//ExternalReferenceType_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ExternalReferenceType_OrGroup/externalreferencetype_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InstanceHierarchy_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InstanceHierarchy_OrGroup/instancehierarchy_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceClassLib_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClassLib_OrGroup/interfaceclasslib_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleClassLib_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClassLib_OrGroup/roleclasslib_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SystemUnitClassLib_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClassLib_OrGroup/systemunitclasslib_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeLib_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeLib_OrGroup/attributelib_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CAEXFile_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CAEXFile_OrGroup/caexfile_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceClass_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceClass_OrGroup/interfaceclass_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InternalElement_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalElement_OrGroup/internalelement_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//ExternalInterface_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//ExternalInterface_OrGroup/externalinterface_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleRequirements_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleRequirements_OrGroup/rolerequirements_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SystemUnitClass_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SystemUnitClass_OrGroup/systemunitclass_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//AttributeNameMapping_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//AttributeNameMapping_OrGroup/attributenamemapping_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InterfaceIDMapping_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InterfaceIDMapping_OrGroup/interfaceidmapping_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//RoleClass_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//RoleClass_OrGroup/roleclass_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Mapping_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Mapping_OrGroup/mapping_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//SupportedRoleClass_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//SupportedRoleClass_OrGroup/supportedroleclass_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//InternalLink_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//InternalLink_OrGroup/internallink_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//GenericElement_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//GenericElement_OrGroup/genericelement_containment"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//GenericAttribute_OrGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//GenericAttribute_OrGroup/genericattribute_containment"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Object_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Object_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Object_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Object_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Object_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Object_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Object_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//Object_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//Object_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_EvaluationOperation_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Object_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Object_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Object_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Object_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Boolean_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Boolean_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Boolean_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Boolean_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Boolean_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Boolean_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Boolean_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Boolean_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Boolean_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//Boolean_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//Boolean_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_EvaluationOperation_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Boolean_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Boolean_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Boolean_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Boolean_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Boolean_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_Original_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//equals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//equals_FunctionalOperator/obj"/>
+      <genOperations ecoreOperation="QMM.ecore#//equals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//equals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//toString_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//toString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//toString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CharSequence_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//CharSequence_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//CharSequence_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//CharSequence_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//CharSequence_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//CharSequence_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_EvaluationOperation_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CharSequence_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_Original_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Integer_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Integer_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Integer_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Integer_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Integer_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Integer_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Integer_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Integer_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Integer_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//Integer_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//Integer_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_EvaluationOperation_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Integer_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Integer_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Integer_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Integer_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Integer_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_Original_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//length_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//length_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//length_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_Operator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_Type"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_FunctionalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Character_FunctionalType/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Character_CalculateableParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Character_CalculateableParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Character_CalculateableParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Character_CalculateableParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Character_FunctionalParameter">
+      <genOperations ecoreOperation="QMM.ecore#//Character_FunctionalParameter/validate">
+        <genParameters ecoreParameter="QMM.ecore#//Character_FunctionalParameter/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//Character_FunctionalParameter/validate/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_Calculateable"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_CalculateableElement"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_Argument"/>
+    <genClasses ecoreClass="QMM.ecore#//Character_PrimitiveArgument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QMM.ecore#//Character_PrimitiveArgument/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_EvaluationOperation_Argument"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_ExpressionOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_BitOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Character_BitOperator/connects"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Character_And_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Character_And_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Character_Or_BitOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Character_Or_BitOperator/getLiteral"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_Original_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//charAt_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//charAt_FunctionalOperator/i"/>
+      <genOperations ecoreOperation="QMM.ecore#//charAt_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//charAt_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//contains_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//contains_FunctionalOperator/charSequence"/>
+      <genOperations ecoreOperation="QMM.ecore#//contains_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//contains_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//substring_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//substring_FunctionalOperator/startIndex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//substring_FunctionalOperator/endIndex"/>
+      <genOperations ecoreOperation="QMM.ecore#//substring_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//substring_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//concat_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//concat_FunctionalOperator/str"/>
+      <genOperations ecoreOperation="QMM.ecore#//concat_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//concat_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//endsWith_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//endsWith_FunctionalOperator/suffix"/>
+      <genOperations ecoreOperation="QMM.ecore#//endsWith_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//endsWith_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//equalsIgnoreCase_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//equalsIgnoreCase_FunctionalOperator/anotherString"/>
+      <genOperations ecoreOperation="QMM.ecore#//equalsIgnoreCase_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//equalsIgnoreCase_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//indexOfString_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//indexOfString_FunctionalOperator/str"/>
+      <genOperations ecoreOperation="QMM.ecore#//indexOfString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//indexOfString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//isEmpty_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//isEmpty_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//isEmpty_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//greaterThan_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//greaterThan_FunctionalOperator/i"/>
+      <genOperations ecoreOperation="QMM.ecore#//greaterThan_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//greaterThan_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//greaterEquals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//greaterEquals_FunctionalOperator/i"/>
+      <genOperations ecoreOperation="QMM.ecore#//greaterEquals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//greaterEquals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//smallerThan_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//smallerThan_FunctionalOperator/i"/>
+      <genOperations ecoreOperation="QMM.ecore#//smallerThan_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//smallerThan_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//smallerEquals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//smallerEquals_FunctionalOperator/i"/>
+      <genOperations ecoreOperation="QMM.ecore#//smallerEquals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//smallerEquals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//parseBoolean_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//parseBoolean_FunctionalOperator/s"/>
+      <genOperations ecoreOperation="QMM.ecore#//parseBoolean_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//parseBoolean_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//compareTo_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//compareTo_FunctionalOperator/b"/>
+      <genOperations ecoreOperation="QMM.ecore#//compareTo_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//compareTo_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_Integer_equals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Object_Integer_equals_FunctionalOperator/obj"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Integer_equals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Integer_equals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_Integer_toString_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Object_Integer_toString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Integer_toString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Integer_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//InheritedFrom_Object_to_Integer_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//Object_CharSequence_equals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Object_CharSequence_equals_FunctionalOperator/obj"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_CharSequence_equals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_CharSequence_equals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_CharSequence_toString_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Object_CharSequence_toString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_CharSequence_toString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//CharSequence_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//InheritedFrom_Object_to_CharSequence_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//Object_Character_equals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Object_Character_equals_FunctionalOperator/obj"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Character_equals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Character_equals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_Character_toString_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Object_Character_toString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Character_toString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Character_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//InheritedFrom_Object_to_Character_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//Object_Boolean_equals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Object_Boolean_equals_FunctionalOperator/obj"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Boolean_equals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Boolean_equals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Object_Boolean_toString_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Object_Boolean_toString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Object_Boolean_toString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//Boolean_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//InheritedFrom_Object_to_Boolean_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_String_length_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_String_length_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_String_length_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_String_Object_CharSequence_equals_FunctionalOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//CharSequence_String_Object_CharSequence_equals_FunctionalOperator/obj"/>
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_String_Object_CharSequence_equals_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_String_Object_CharSequence_equals_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//CharSequence_String_Object_CharSequence_toString_FunctionalOperator">
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_String_Object_CharSequence_toString_FunctionalOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//CharSequence_String_Object_CharSequence_toString_FunctionalOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="QMM.ecore#//String_FunctionalOperator"/>
+    <genClasses image="false" ecoreClass="QMM.ecore#//InheritedFrom_CharSequence_to_String_FunctionalOperator"/>
+    <genClasses ecoreClass="QMM.ecore#//Count_AggregationOperator">
+      <genOperations ecoreOperation="QMM.ecore#//Count_AggregationOperator/getLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Sum_AggregationOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Sum_AggregationOperator/calculateable"/>
+      <genOperations ecoreOperation="QMM.ecore#//Sum_AggregationOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Sum_AggregationOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Min_AggregationOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Min_AggregationOperator/calculateable"/>
+      <genOperations ecoreOperation="QMM.ecore#//Min_AggregationOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Min_AggregationOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//Max_AggregationOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//Max_AggregationOperator/calculateable"/>
+      <genOperations ecoreOperation="QMM.ecore#//Max_AggregationOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//Max_AggregationOperator/getAllParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="QMM.ecore#//IntegerParseInt_ClassOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QMM.ecore#//IntegerParseInt_ClassOperator/calculateable"/>
+      <genOperations ecoreOperation="QMM.ecore#//IntegerParseInt_ClassOperator/getLiteral"/>
+      <genOperations ecoreOperation="QMM.ecore#//IntegerParseInt_ClassOperator/getAllParameters"/>
+      <genOperations ecoreOperation="QMM.ecore#//IntegerParseInt_ClassOperator/validate">
+        <genParameters ecoreParameter="QMM.ecore#//IntegerParseInt_ClassOperator/validate/diagnostic"/>
+        <genParameters ecoreParameter="QMM.ecore#//IntegerParseInt_ClassOperator/validate/context"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

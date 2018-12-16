@@ -1,0 +1,22 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find InternalElement510863756(result);
+}
+
+pattern InternalElement510863756(elem:InternalElement){
+    InternalElement(elem);
+    find n1_CAEXObject_name_AttrEClass(elem,n1);
+}
+
+pattern n1_CAEXObject_name_AttrEClass(elem:InternalElement,n1){
+	find Integer_parseInt1423697370(elem, ref1423697370);
+	InternalElement.name(elem,n1);
+	//check(((n1).contains(((ref1423697370).toString()))));
+}
+
+pattern Integer_parseInt1423697370(elem:InternalElement, result:java Integer){
+	result == eval(Integer.parseInt("1"));
+}
+

@@ -1,0 +1,11 @@
+package qrmm
+import "/QRMM/model/QRMM.ecore"
+		
+pattern query(result:SearchableElement){
+    find CAEXObject861112427(result);
+}
+
+pattern CAEXObject861112427(elem:CAEXObject){
+    CAEXObject(elem);
+}
+
