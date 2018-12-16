@@ -11,12 +11,19 @@ Please follow the following steps to set the application up in your Eclipse IDE 
 2. Import all projects into Eclipse.
 
 3. Right-mouse-click on the project org.xtext.MQL -> run as -> Eclipse Application
+
 In case of errors on Application startup please follow the following steps:
+
 3.0 Right-mouse-click on the project org.xtext.MQL -> run as -> Run Configuration...
+
 3.1 In the "Main" Tab make sure that "Location" is set to "${workspace_loc:org.xtext.MQL.ui}/runtime/"
+
 3.2 In the "Plug-Ins" tab click on "Add Required Plugins" to add all plugin-dependencies that are needed to run this project.
+
 3.3	In the "Plug-ins" tab click on "Validate Plug-Ins" to make sure that there are no errors about missing plugin-dependencies.
+
 3.4 Click on "Apply"
+
 3.5 Click on "Run"
 
 4. In the new Eclipse Runtime Window create a new project called "MQLRuntime" if it doesn't already exists.
